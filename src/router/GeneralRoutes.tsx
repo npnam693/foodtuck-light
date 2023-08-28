@@ -8,10 +8,10 @@ const GeneralRoutes : Array<IRoutesProps> = [
         title: 'Home',
     },
     {
-        path: '/home',  
+        path: '/menu',
         element: Home,
-        title: 'Home',
-    },
+        title: 'Menu',
+    }
 ]
 
 export default GeneralRoutes
