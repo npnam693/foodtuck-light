@@ -6,8 +6,8 @@ export default {
   ],
   theme: {
     content: {
-      'star': "url('/decoration /stars.png')",
-      'limb': "url('/decoration /limb.png')"
+      'star': "url('/decoration/stars.png')",
+      'limb': "url('/decoration/limb.png')"
     },
     colors: {
       'primary': '#195A00',
@@ -20,7 +20,7 @@ export default {
       'sans': ['Helvetica', 'Arial', 'sans-serif'],
       'inter': ['Inter', 'sans-serif'],
       'attractive': ['Miniver', 'cursive']
-    },
+    }, 
     extend: {},
   },
   plugins: [],

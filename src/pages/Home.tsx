@@ -5,6 +5,8 @@ import HomeCategory from '../components/home/HomeCategory'
 import HomeWhyChoose from '../components/home/HomeWhyChoose'
 import HomeMenu from '../components/home/HomeMenu'
 import HomeTeam from '../components/home/HomeTeam'
+import HomeReview from '../components/home/HomeReview'
+import HomeBlogs from '../components/home/HomeBlogs'
 
 const Home = () => {
   return (
@@ -21,6 +23,8 @@ const Home = () => {
           <HomeWhyChoose />
           <HomeMenu />
           <HomeTeam />
+          <HomeReview />
+          <HomeBlogs />
         </div>
       </DefaultLayout>
     </div>
