@@ -2,7 +2,7 @@
 const HomeTeam = () => {
   return (
     <section className="mt-24 flex flex-col items-center">
-        <img src='./decorate/cabbage.png' alt='team' className="absolute right-0"/>
+        <img src='./decoration /cabbage.png' alt='team' className="absolute right-0"/>
         <img src='./images/bg-team.png' alt='bg-team' className="w-screen absolute"/>
         <div className="relative mt-40">
             <p className="font-bold text-5xl text-white font-san mb-2 text-center
