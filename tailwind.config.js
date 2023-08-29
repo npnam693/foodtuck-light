@@ -6,7 +6,8 @@ export default {
   ],
   theme: {
     content: {
-      'star': "url('/decorate/stars.png')"
+      'star': "url('/decorate/stars.png')",
+      'limb': "url('/decorate/limb.png')"
     },
     colors: {
       'primary': '#195A00',
@@ -14,7 +15,6 @@ export default {
       'content': "#4f4f4f",
       'white': '#fff',
       'black': '#000',
-      
     },
     fontFamily: {
       'sans': ['Helvetica', 'Arial', 'sans-serif'],

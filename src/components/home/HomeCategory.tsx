@@ -6,10 +6,13 @@ const HomeCategory = () => {
   return (
     <section className="mt-24 flex flex-col items-center">
       <div className="relative">
-        <p className="font-bold text-5xl text-text font-san mb-8">Food category</p>
+        <p className="font-bold text-5xl text-text font-san mb-8 text-center
+         after:block after:content-limb after:bottom-10 after:right-32 after:absolute
+        ">
+          Food category
+        </p>
         <p className="text-[#828282] text-center mb-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
         Varius sed pharetra dictum neque massa congue</p>
-        <img src="./decorate/category.png" alt="category" className="absolute -top-12 -z-10 right-36"/>
       </div>
 
       <div className="flex items-center">
