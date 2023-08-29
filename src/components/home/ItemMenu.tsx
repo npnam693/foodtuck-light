@@ -2,7 +2,7 @@ import React from 'react'
 
 const ItemMenu = () => {
   return (
-    <div className='flex flex-row w-[calc(50%-20px)] justify-between mb-6
+    <div className='flex flex-row w-full justify-between mb-6
         border-b-[1px] border-[#E0E0E0] border-dashed
     '>
         <div>

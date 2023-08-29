@@ -3,3 +3,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+
+
+.overide_input .ant-input-group-addon {
+    background-color: #195A00;
+    color: white;
+}
+
+.overide_input .ant-input {
+    color: #828282
+}
+
+.overide_input .ant-input:focus {
+    color: black !important;
+}
+
+.overide-shop-search .ant-input{
+    border-radius: 0 !important;
+    background-color: rgba(168,188,161,.3) !important;
+}
+
+.overide-shop-search .ant-btn  {
+    border-radius: 0 !important;
+    background-color: #195A00 !important;
+    color: white !important;
+}
+

@@ -5,10 +5,11 @@ const HomeAboutUs = () => {
   return (
     <section  className="flex justify-between items-center mt-24">
       <div className="flex gap-5  min-w-[670px]">
-        <img src="./images/home/aboutus_1.png" alt="aboutus_1" className="w-[336px] pb-[200px]"/>
+        <img src="./images/home/aboutus_1.png" alt="aboutus_1" loading="lazy" 
+          className="w-[336px] pb-[200px]"/>
         <div className="w-[336px] pt-[54px]">
-          <img src="./images/home/aboutus_2.png" alt="aboutus_2" className="mb-5" />
-          <img src="./images/home/aboutus_3.png" alt="aboutus_3" />
+          <img src="./images/home/aboutus_2.png" alt="aboutus_2" loading="lazy" className="mb-5" />
+          <img src="./images/home/aboutus_3.png" alt="aboutus_3" loading="lazy" />
         </div>
       </div>
 

@@ -1,5 +1,4 @@
-import React from "react";
-
+import React from 'react';
 /**
  * @description Interface for the routes props
  * @param {string} path - The path of the route
@@ -8,6 +7,6 @@ import React from "react";
  */
 export interface IRoutesProps {
     path: string;
-    element: React.FC;
+    element: React.ReactElement;
     title: string;
 }

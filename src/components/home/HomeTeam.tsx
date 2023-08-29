@@ -4,8 +4,8 @@ const HomeTeam = () => {
   return (
     <section className="mt-24 flex flex-col items-center">
         <div className="absolute w-screen">
-            <img src='./decoration/cabbage.png' alt='team' className="absolute right-0 z-10 -top-[380px]"/>
-            <img src='./images/bg-team.png' alt='bg-team' className="w-screen absolute"/>
+            <img src='./decoration/cabbage.png' alt='team' loading="lazy" className="absolute right-0 z-10 -top-[380px]"/>
+            <img src='./images/bg-team.png' alt='bg-team' loading="lazy" className="w-screen absolute"/>
         </div>
         <div className="relative mt-40">
             <p className="font-bold text-5xl text-white font-san mb-2 text-center

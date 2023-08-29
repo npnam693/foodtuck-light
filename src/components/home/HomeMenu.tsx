@@ -36,14 +36,24 @@ const HomeMenu = () => {
 
       </div>
       <div className='flex justify-between flex-wrap w-full pt-14 mb-14'>
-        <ItemMenu />
-        <ItemMenu />
-        <ItemMenu />
-        <ItemMenu />
-        <ItemMenu />
-        <ItemMenu />
-        <ItemMenu />
-        <ItemMenu />
+        <div className='basis-[calc(50%-20px)]'>
+          <ItemMenu />
+        </div>
+        <div className='basis-[calc(50%-20px)]'>
+          <ItemMenu />
+        </div>
+        <div className='basis-[calc(50%-20px)]'>
+          <ItemMenu />
+        </div>
+        <div className='basis-[calc(50%-20px)]'>
+          <ItemMenu />
+        </div>
+        <div className='basis-[calc(50%-20px)]'>
+          <ItemMenu />
+        </div>
+        <div className='basis-[calc(50%-20px)]'>
+          <ItemMenu />
+        </div>
       </div> 
       <Button type="default" className="border-primary  text-primary font-bold h-14 w-56 text-lg">View menu</Button>
     </section>

@@ -6,23 +6,23 @@ const Header = () => {
   console.log(currentUrl)
 
   return (
-    <div className="flex items-center">
+    <header className="flex items-center">
       <p className="font-sans text-2xl font-bold mr-16">F
         <span className="text-primary">oo</span>
         dtuck
       </p>
 
-      {
-        HEADER_SITEMAP.map((item) => (
-          <Link to={item.path} className={`text-text ml-8 ${currentUrl !== item.path ? '' : 
-          'font-bold after:block after:w-6 after:h-0.5 after:bg-primary after:absolute'}`}
-          >
-            {item.title}
-          </Link>
-        ))
-      }
-
-
+      <nav>
+        {
+          HEADER_SITEMAP.map((item) => (
+            <Link to={item.path} className={`text-text ml-8 relative ${currentUrl !== item.path ? '' : 
+            'font-bold after:block after:w-6 after:h-0.5 after:bg-primary after:absolute after:left-0'}`}
+            >
+              {item.title}
+            </Link>
+          ))
+        }
+      </nav>
 
       <div className="flex items-center ml-auto">
       {
@@ -33,11 +33,7 @@ const Header = () => {
         ))
       }
       </div>
-
-
-
-
-    </div>
+    </header>
   )
 }
 

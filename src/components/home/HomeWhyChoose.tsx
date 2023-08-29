@@ -6,9 +6,9 @@ const HomeWhyChoose = () => {
   return (
     <section className='flex mt-24 justify-between items-center'>
         <div className='min-w-[700px] flex relative'>
-            <img src='./images/home/whychoose_1.png' alt='why-choose_1'
+            <img src='./images/home/whychoose_1.png' alt='why-choose_1' loading="lazy"
               className='pb-40'/>
-            <img src='./images/home/whychoose_2.png' alt='why-choose_2' 
+            <img src='./images/home/whychoose_2.png' alt='why-choose_2' loading="lazy"
                 className='absolute -bottom-0 -right-4' />
         </div>
 
