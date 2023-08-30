@@ -1,5 +1,6 @@
 import { RightOutlined } from '@ant-design/icons'
 import { Breadcrumb } from 'antd'
+import bgImage from '../../public/images/bg-test.png'
 import { Link } from 'react-router-dom'
 
 const CoverPage = ({title, currentPage, listPath} : {
@@ -9,12 +10,11 @@ const CoverPage = ({title, currentPage, listPath} : {
 }) => {
   return (
     <div >
-        <img src='./images/bg-test.png' alt='bg-team' loading="lazy" 
+        <img src={bgImage} alt='bg-team' loading="lazy" 
             className="w-screen absolute left-0 top-0 -z-10"/>
         <p className="font-bold text-5xl text-white font-san mb-8 text-center pt-28">
           {title}
         </p>
-
         <Breadcrumb
             items={
                 [

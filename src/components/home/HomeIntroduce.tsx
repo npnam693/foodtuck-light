@@ -32,7 +32,7 @@ const HomeIntroduce = () => {
             <img src='./images/bg-dish.png' alt="bg-dish" className="absolute -z-10 top-0 -right-40 w-[900px]"/>
           </div>
         </div>
-        <div className="self-center flex flex-col items-center absolute bottom-10 animate-bounce">
+        <div className="self-center flex flex-col items-center absolute bottom-10 motion-safe:animate-bounce">
             <p>Scrolldown</p>
             <div className="w-[1px] h-20 bg-black"></div>
         </div>

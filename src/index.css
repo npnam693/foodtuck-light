@@ -21,15 +21,33 @@
 .overide_input .ant-input:focus {
     color: black !important;
 }
-
 .overide-shop-search .ant-input{
     border-radius: 0 !important;
     background-color: rgba(168,188,161,.3) !important;
 }
-
 .overide-shop-search .ant-btn  {
     border-radius: 0 !important;
     background-color: #195A00 !important;
     color: white !important;
+}
+
+/* Overide checkbox AntD  */
+.overide-shop-checkbox .ant-checkbox-inner {
+    border-radius: 0 !important;
+}
+
+.overide-shop-checkbox .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #195A00 !important;
+    border-color: #195A00 !important;
+}
+
+/* Overide slider AntD */
+.overide-shop-slider .ant-slider-track {
+    background-color: #195A00   !important;
+}
+
+.overide-shop-slider .ant-slider-handle::after {
+    box-shadow: 0 0 0 2px white !important;
+    background-color: #195A00 !important;
 }
 

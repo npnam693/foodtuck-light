@@ -7,10 +7,10 @@ const Header = () => {
 
   return (
     <header className="flex items-center">
-      <p className="font-sans text-2xl font-bold mr-16">F
+      <Link to="/" className="font-sans text-2xl font-bold mr-16">F
         <span className="text-primary">oo</span>
         dtuck
-      </p>
+      </Link>
 
       <nav>
         {

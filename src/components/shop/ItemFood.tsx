@@ -1,8 +1,16 @@
 import { HeartOutlined, LinkOutlined, ShoppingOutlined } from "@ant-design/icons"
 import { Food } from "../../types/listType"
 import { Button } from "antd"
+import { useNavigate } from "react-router-dom";
 
-const dataFoods : {[key: string] : Food} = {
+import food1_1 from '../../../public/images/detail/food_1_1.png'
+import food1_2 from '../../../public/images/detail/food_1_2.png'
+import food1_3 from '../../../public/images/detail/food_1_3.png'
+import food1_4 from '../../../public/images/detail/food_1_4.png'
+import food1_0 from '../../../public/images/detail/food_1_5.png'
+
+
+export const dataFoods : {[key: string] : Food} = {
     '1' : {
         id: '1',
         name: "Fresh Lime",
@@ -11,7 +19,7 @@ const dataFoods : {[key: string] : Food} = {
         reviews: [],
         rate: 4,
         qtyReview: 10,
-        images: ['./images/shop/food_1.png'],
+        images: [food1_0, food1_1, food1_2, food1_3, food1_4],
         qtyRemain: 20,
         quickIntro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.',
         desc: [
@@ -20,22 +28,25 @@ const dataFoods : {[key: string] : Food} = {
         ]
     },
 }
-// relative w-full h-[267px] bg-[url('./images/shop/food_1.png')] bg-cover
-// relative w-full h-[267px] bg-[url('./images/shop/food_1.png')]
+console.log(dataFoods['1'].images[0])
 
 const ItemFood = ({id} : {id: string}) => {
-  return (
-    <div className="group w-[312px] hover:shadow-md">
-        <div className={`relative w-full h-[267px] bg-[url('${dataFoods[id].images[0]}')]`}>
-            <div className="w-full h-full absolute bg-[rgba(0,0,0,0.5)] hidden group-hover:block" />
+    const navigate = useNavigate()
+    return (
+    <div className="group w-[312px]">
+        <div className={`relative w-full h-[267px] bg-[url('${dataFoods[id].images[0]}')]`}
+            style={{backgroundImage: 'url(' + dataFoods[id].images[0] + ')'}}
+        >
+            <div className="w-full h-full absolute bg-[rgba(0,0,0,0.6)] hidden group-hover:block" />
             <div className="w-full h-full  items-center justify-center gap-x-6 hidden group-hover:flex group-hover:brightness-150 z-10">
-                <Button className='bg-white text-primary hover:!bg-primary hover:text-white' type="primary" size="large" icon={<LinkOutlined />}></Button>
-                <Button className='bg-white text-primary hover:!bg-primary hover:text-white' type="primary" size="large" icon={<ShoppingOutlined />}></Button>
-                <Button className='bg-white text-primary hover:!bg-primary hover:text-white' type="primary" size="large" icon={<HeartOutlined />}></Button>
+                <Button className='bg-white text-primary hover:!bg-primary hover:text-white' type="primary" size="large" icon={<LinkOutlined />} 
+                    onClick={() => navigate('/detail-product/' + id)}
+                />
+                <Button className='bg-white text-primary hover:!bg-primary hover:text-white' type="primary" size="large" icon={<ShoppingOutlined />} />
+                <Button className='bg-white text-primary hover:!bg-primary hover:text-white' type="primary" size="large" icon={<HeartOutlined />} />
             </div>
         </div>
 
-        
         <p className="text-[#333] font-bold text-lg">{dataFoods[id].name}</p>
         <div>
             <span className="text-primary mr-2">${dataFoods[id].salePrice}</span>
