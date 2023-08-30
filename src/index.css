@@ -5,10 +5,6 @@
 @tailwind utilities;
 
 
-
-
-
-
 .overide_input .ant-input-group-addon {
     background-color: #195A00;
     color: white;
@@ -51,3 +47,60 @@
     background-color: #195A00 !important;
 }
 
+
+/* Input - [Product Detail] */
+.overide-input--qty-detail .ant-input-number-group-addon {
+    border-radius: 0;
+    cursor: pointer;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding: 0;
+}
+
+
+.overide-input--qty-detail .ant-input-number-group-addon:hover {
+    background-color: rgba(168,188,161,.3) !important;
+    border: 1px solid #195A00;
+    transition-delay: 75ms;
+}
+
+.overide-input--qty-detail .ant-input-number:hover {
+    border: 1px solid #195A00;
+}
+.overide-input--qty-detail .ant-input-number-focused {
+    border: 1px solid #195A00;
+}
+
+.overide-input--qty-detail .ant-input-number-input-wrap {
+    width: 100px;
+    margin-top: auto;
+    padding: 10px;
+    margin-bottom: auto;
+} 
+
+.overide-input--qty-detail .ant-input-number-input {
+    text-align: center;
+    line-height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 16px;
+} 
+
+/* Segmented - [Product Detail] */
+.overide-segmented--detail .ant-segmented-item-selected {
+    background-color: #195A00;
+    color: white;
+    border-radius: 0;
+}
+
+.overide-segmented--detail .ant-segmented-thumb {
+    background-color: #195A00;
+    border-radius: 0;
+}
+
+.overide-segmented--detail .ant-segmented-item {
+    border-radius: 0;
+    width: 120px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

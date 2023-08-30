@@ -1,22 +1,27 @@
 import { Link } from "react-router-dom"
-import { FOOTER_SITEMAP } from "../constant/sitemap"
+import { FOOTER_SITEMAP } from "../../constant/sitemap"
 import { SendOutlined } from "@ant-design/icons"
 import { Input } from "antd"
 
+
+
+
+
 const INSTAGRAM_GALLERY = [
-  './images/home/ins-gallery_1.png', 
-  './images/home/ins-gallery_2.png',
-  './images/home/ins-gallery_3.png',
-  './images/home/ins-gallery_4.png',
-  './images/home/ins-gallery_5.png',
-  './images/home/ins-gallery_6.png'
+  '/images/footer/ins-gallery_1.png',
+  '/images/footer/ins-gallery_2.png',
+  '/images/footer/ins-gallery_3.png',
+  '/images/footer/ins-gallery_4.png',
+  '/images/footer/ins-gallery_5.png',
+  '/images/footer/ins-gallery_6.png', 
 ]
+ 
 const Footer = () => {
   return (
     <footer className='bg-disabledGreen w-screen absolute -z-10 left-0 pt-32'>
-      <img src='./decoration/limb_big.png' alt="limb" 
+      <img src='/textures/limb_big.png' alt="limb" 
         className="absolute -top-56 left-0"/>
-      <img src='./decoration/cauliflower.png' alt='cauliflower' 
+      <img src='/textures/cauliflower.png' alt='cauliflower' 
         className="right-0 absolute -bottom-16"
       />
       <div className="flex justify-between px-[300px]">

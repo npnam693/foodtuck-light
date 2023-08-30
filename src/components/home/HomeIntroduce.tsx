@@ -24,12 +24,12 @@ const HomeIntroduce = () => {
 
           <div className="relative -right-10"> 
             <div className="border-2 border-text w-[620px] h-[620px] absolute rounded-full -z-10 -left-12">
-              <img src='./images/dish_2.png' alt='dish_2' className="w-40 absolute -top-10 left-20" />
-              <img src='./images/dish_3.png' alt='dish_3' className="w-32 absolute top-[230px] -left-16" />
-              <img src="./images/dish_4.png" alt="dish_4" className="w-24 absolute bottom-5 left-14" />           
+              <img src='/images/home/dish_2.png' alt='dish_2' className="w-40 absolute -top-10 left-20" />
+              <img src='/images/home/dish_3.png' alt='dish_3' className="w-32 absolute top-[230px] -left-16" />
+              <img src="/images/home/dish_4.png" alt="dish_4" className="w-24 absolute bottom-5 left-14" />           
             </div>
-            <img src='./images/dish_1.png' alt='dish_1' />  
-            <img src='./images/bg-dish.png' alt="bg-dish" className="absolute -z-10 top-0 -right-40 w-[900px]"/>
+            <img src='/images/home/dish_1.png' alt='dish_1' />  
+            <img src='/images/background/bg-dish.png' alt="bg-dish" className="absolute -z-10 top-0 -right-40 w-[900px]"/>
           </div>
         </div>
         <div className="self-center flex flex-col items-center absolute bottom-10 motion-safe:animate-bounce">

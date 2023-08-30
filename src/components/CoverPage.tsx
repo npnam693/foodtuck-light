@@ -1,7 +1,8 @@
 import { RightOutlined } from '@ant-design/icons'
 import { Breadcrumb } from 'antd'
-import bgImage from '../../public/images/bg-test.png'
 import { Link } from 'react-router-dom'
+import bgImage from '../../public/images/background/bg-cover.png'
+
 
 const CoverPage = ({title, currentPage, listPath} : {
     title: string,

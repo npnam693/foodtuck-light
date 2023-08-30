@@ -3,12 +3,6 @@ import { Food } from "../../types/listType"
 import { Button } from "antd"
 import { useNavigate } from "react-router-dom";
 
-import food1_1 from '../../../public/images/detail/food_1_1.png'
-import food1_2 from '../../../public/images/detail/food_1_2.png'
-import food1_3 from '../../../public/images/detail/food_1_3.png'
-import food1_4 from '../../../public/images/detail/food_1_4.png'
-import food1_0 from '../../../public/images/detail/food_1_5.png'
-
 
 export const dataFoods : {[key: string] : Food} = {
     '1' : {
@@ -19,7 +13,7 @@ export const dataFoods : {[key: string] : Food} = {
         reviews: [],
         rate: 4,
         qtyReview: 10,
-        images: [food1_0, food1_1, food1_2, food1_3, food1_4],
+        images: ['/images/detail/food_1_5.png', '/images/detail/food_1_4.png', '/images/detail/food_1_3.png', '/images/detail/food_1_2.png', '/images/detail/food_1_1.png'],
         qtyRemain: 20,
         quickIntro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.',
         desc: [

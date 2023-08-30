@@ -6,10 +6,8 @@ export default {
   ],
   theme: {
     content: {
-      'star': "url('/decoration/stars.png')",
-      'limb': "url('/decoration/limb.png')"
-      
-
+      'star': "url('/textures/stars.png')",
+      'limb': "url('/textures/limb.png')"
     },
     colors: {
       'primary': '#195A00',

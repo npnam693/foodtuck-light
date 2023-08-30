@@ -11,7 +11,7 @@ import HomePartner from '../components/home/HomePartner'
 const Home = () => {
   return (
     <div className='pb-24'>
-      <img src={'./bg_home-1.svg'} alt='Foodtuck' 
+      <img src={'/images/background/bg_home-1.png'} alt='Foodtuck' 
         className='absolute -z-10 top-0 right-0 w-[900px]'
       />
 
