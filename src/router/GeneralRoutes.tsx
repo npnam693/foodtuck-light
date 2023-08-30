@@ -1,41 +1,53 @@
 import { IRoutesProps } from "../types/props"
+
 import Home from "../pages/Home"
 import Menu from "../pages/Menu"
 import Shop from "../pages/Shop"
 import DetailProduct from "../pages/DetailProduct"
-import DefaultLayout from "../layout"
+import ShoppingCart from "../pages/Cart"
+import Blog from "../pages/Blog"
+import DetailBlog from "../pages/DetailBlog"
 
 const GeneralRoutes : Array<IRoutesProps> = [
     {
         path: '/',  
-        element: <DefaultLayout><Home /></DefaultLayout>,
+        element: <Home />,
         title: 'Home',
     },
     {
         path: '/menu',
-        element: <DefaultLayout><Menu /></DefaultLayout> ,
+        element: <Menu /> ,
         title: 'Menu',
     },
     {
         path: '/blog',
-        element: <DefaultLayout><div>Blog</div></DefaultLayout> ,
+        element: <Blog />,
         title: 'Blog',
     },
     {
         path: '/about',
-        element: <DefaultLayout><div>About</div></DefaultLayout> ,
+        element: <div>About</div> ,
         title: 'About',
     },
     {
         path: '/shop',
-        element: <DefaultLayout><Shop/></DefaultLayout> ,
+        element: <Shop/> ,
         title: "Shop"
     },
-
     {
         path: '/detail-product/:id',
-        element: <DefaultLayout><DetailProduct /></DefaultLayout>,
+        element: <DetailProduct />,
         title: 'Detail Product'
+    },
+    {
+        path: 'shopping-cart',
+        element: <ShoppingCart />,
+        title: "Shopping Cart"
+    },
+    {
+        path: 'blog/:id',
+        element: <DetailBlog />,
+        title: "Detail Blog"
     }
 ]
 

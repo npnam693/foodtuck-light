@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { RightCircleOutlined } from '@ant-design/icons';
 import { Checkbox, Input } from 'antd'
 import { Slider } from 'antd';
-import ItemLastestProduct from './ItemLastestProduct';
+import ItemLastestProduct from '../../../components/shop/ItemLastestProduct';
 
 const listCategory : Array<string> = [
     'Sandwiches', 'Burger', "Chiken Chup", 'Drink', 'Pizza', 'Thi', 'Non Veg', 'Uncategorized' 

@@ -1,5 +1,5 @@
 import { HeartOutlined, LinkOutlined, ShoppingOutlined } from "@ant-design/icons"
-import { Food } from "../../types/listType"
+import { Food } from "../types/listType"
 import { Button } from "antd"
 import { useNavigate } from "react-router-dom";
 
@@ -13,7 +13,7 @@ export const dataFoods : {[key: string] : Food} = {
         reviews: [],
         rate: 4,
         qtyReview: 10,
-        images: ['/images/detail/food_1_5.png', '/images/detail/food_1_4.png', '/images/detail/food_1_3.png', '/images/detail/food_1_2.png', '/images/detail/food_1_1.png'],
+        images: ['/images/detail/food_detail_1-5.png', '/images/detail/food_detail_1-4.png', '/images/detail/food_detail_1-3.png', '/images/detail/food_detail_1-2.png', '/images/detail/food_detail_1-1.png'],
         qtyRemain: 20,
         quickIntro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.',
         desc: [

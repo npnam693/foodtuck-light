@@ -104,3 +104,18 @@
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
+/* Overide Blog Search */
+.overide-blog-search .ant-input{
+    border-radius: 0 !important;
+    min-height: 70px !important;
+    border: 1px solid #E0E0E0 !important;
+} 
+.overide-blog-search .ant-btn  {
+    border-radius: 0 !important;
+    background-color: #195A00 !important;
+    color: white !important;
+    min-height: 70px !important;
+    min-width: 70px !important;
+
+}

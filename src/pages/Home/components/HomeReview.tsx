@@ -1,4 +1,4 @@
-import { ContentReview, UserInfoReview } from './ItemReview'
+import { ContentReview, UserInfoReview } from '../../../components/home/ItemReview'
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons'
 import { Button } from 'antd'
 

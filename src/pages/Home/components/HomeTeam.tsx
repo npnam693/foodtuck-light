@@ -1,4 +1,4 @@
-import ItemMember from "./ItemMember"
+import ItemMember from "../../../components/home/ItemMember"
 
 const HomeTeam = () => {
   return (

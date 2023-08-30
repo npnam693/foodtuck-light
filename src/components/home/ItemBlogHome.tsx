@@ -1,13 +1,13 @@
 import { ArrowRightOutlined, CalendarOutlined, CommentOutlined } from '@ant-design/icons'
-
-const ItemBlog = ({image, title, desc, date, qtyComment} : {
+const ItemBlogHome = ({image, title, desc, date, qtyComment} : {
     image: string,
     title: string,
     desc: string,
     date: string,
     qtyComment: number,
 }) => {
-  return (
+
+    return (
     <div className='shadow-md rounded-md px-6 pb-6'>
         <img src={image} alt={title} loading="lazy" className='mb-6 w-full -mt-5'/>
         <div className='flex gap-x-4 mb-4'>
@@ -28,4 +28,4 @@ const ItemBlog = ({image, title, desc, date, qtyComment} : {
   )
 }
 
-export default ItemBlog
+export default ItemBlogHome

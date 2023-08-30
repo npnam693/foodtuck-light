@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemMenu from './ItemMenu'
+import ItemMenu from '../../../components/home/ItemMenu'
 import { Button } from 'antd'
 
 const typeMenu : Array<string> = ["Breakfast", "Lunch", "Dinner", "Dessert", "Drink", "Snack"]

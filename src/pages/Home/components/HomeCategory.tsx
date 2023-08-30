@@ -1,5 +1,5 @@
 import { Button } from "antd"
-import ItemCategory from "./ItemCategory"
+import ItemCategory from "../../../components/home/ItemCategory"
 import { LeftOutlined, RightOutlined } from "@ant-design/icons"
 
 const HomeCategory = () => {

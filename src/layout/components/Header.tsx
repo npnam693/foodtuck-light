@@ -3,7 +3,6 @@ import { HEADER_SITEMAP, HEADER_ACTION} from "../../constant/sitemap"
 
 const Header = () => {
   const currentUrl = useLocation().pathname;
-  console.log(currentUrl)
 
   return (
     <header className="flex items-center">
@@ -14,8 +13,8 @@ const Header = () => {
       
       <nav>
         {
-          HEADER_SITEMAP.map((item) => (
-            <Link to={item.path} className={`text-text ml-8 ${currentUrl !== '/' && 'text-white'} relative ${currentUrl !== item.path ? '' : 
+          HEADER_SITEMAP.map((item, index) => (
+            <Link to={item.path} key={index} className={`text-text ml-8 ${currentUrl !== '/' && 'text-white'} relative ${currentUrl !== item.path ? '' : 
             'font-bold after:block after:w-6 after:h-0.5 after:bg-primary after:absolute after:left-0'}`}
             >
               {item.title}
@@ -26,8 +25,8 @@ const Header = () => {
 
       <div className="flex items-center ml-auto">
       {
-        HEADER_ACTION.map((item) => (
-          <div className="ml-8 text-white">
+        HEADER_ACTION.map((item, index) => (
+          <div className="ml-8 text-white" key={index}>
             {item.icon}
           </div>
         ))
