@@ -1,10 +1,14 @@
-import React from 'react'
+import { useParams } from 'react-router-dom'
+import { FacebookFilled, InstagramFilled, TwitterOutlined, YoutubeFilled } from '@ant-design/icons'
+
 import CoverPage from '../../components/CoverPage'
 import BlogSidebar from '../Blog/components/BlogSidebar'
-import { useParams } from 'react-router-dom'
 import { dataBlogs } from '../../data'
 import ItemBlog from '../../components/blog/ItemBlog'
-import { FacebookFilled, InstagramFilled, TwitterOutlined, YoutubeFilled } from '@ant-design/icons'
+import ItemComment from '../../components/ItemComment'
+import { Button, Divider, Input } from 'antd'
+import TextArea from 'antd/es/input/TextArea'
+
 
 const DetailBlog = () => {
     const {id} = useParams()
@@ -13,12 +17,11 @@ const DetailBlog = () => {
     <article>
         <CoverPage currentPage='Blog' title='Blog List' listPath={[{title: 'Home', path:'/'}]}/>
 
-        <div className='flex justify-between gap-10'>
+        <div className='flex justify-between gap-10 mb-32'>
             <section className='w-8/12 flex flex-col gap-y-14 grow-0 text-[#4f4f4f] text-base'>
                 <ItemBlog image={dataBlog.image} title={dataBlog.title} desc={dataBlog.desc} 
                     date={dataBlog.date} qtyComments={dataBlog.qtyComments}  creator={dataBlog.creator}
                 />
-                
                 <div className='bg-primary text-white pl-20 pr-5 py-6 relative'>
                     <p className='font-bold text-2xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -84,8 +87,28 @@ const DetailBlog = () => {
                 </div>
 
                 <div>
-                    <p className='font-bold text-3xl text-[#333]'>Comments - 03</p>
+                    <p className='font-bold text-3xl text-[#333] mb-8'>Comments - 03</p>
 
+                    <div className='flex flex-col gap-5'>
+                        <ItemComment />
+                        <ItemComment />
+                        <ItemComment />
+                    </div>
+                </div>
+                
+                <div>
+                    <p className='font-bold text-3xl text-[#333] mb-8'>Post a comment</p>
+
+                    <Divider />
+
+                    <div className='flex mb-6 gap-x-6'>
+                        <Input className='rounded-none h-[56px]' placeholder='Name(*)'/>
+                        <Input className='rounded-none h-[56px]' placeholder='Email(*)'/>
+                    </div>
+                    
+                    <TextArea placeholder="Autosize height based on content lines" autoSize className='rounded-none !min-h-[240px]' />
+                    
+                    <Button className='bg-primary text-white h-[56px] w-[210px] rounded-none mt-6'>Post a comment</Button>
                 </div>
             </section>
 

@@ -123,10 +123,10 @@ const BlogSidebar = () => {
         <div className='border border-1 border-[#E0E0E0] mt-8 pt-8 pb-4 px-12' >
             <p className='font-bold text-[#333] text-xl mb-5'>Follow Us</p>
             <div className='flex gap-x-3 justify-center pb-5' >
-                <YoutubeFilled className='p-6 bg-disabledGreen hover:bg-primary hover:text-white text-2xl'/> 
-                <FacebookFilled className='p-6 bg-disabledGreen hover:bg-primary hover:text-white text-2xl'/> 
-                <TwitterOutlined className='p-6 bg-disabledGreen hover:bg-primary hover:text-white text-2xl'/> 
-                <InstagramFilled className='p-6 bg-disabledGreen hover:bg-primary hover:text-white text-2xl'/> 
+                <YoutubeFilled className='p-3 bg-disabledGreen hover:bg-primary hover:text-white text-2xl'/> 
+                <FacebookFilled className='p-3 bg-disabledGreen hover:bg-primary hover:text-white text-2xl'/> 
+                <TwitterOutlined className='p-3 bg-disabledGreen hover:bg-primary hover:text-white text-2xl'/> 
+                <InstagramFilled className='p-3 bg-disabledGreen hover:bg-primary hover:text-white text-2xl'/> 
             </div>
         </div>
     </>

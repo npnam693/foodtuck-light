@@ -51,4 +51,44 @@ export const dataBlogs = [
       qtyComments: 10,
       creator: "Admin",
     },
-  ]
+]
+
+export const dataMembers = [
+  {
+    name: 'Tahmina Rumi',
+    role: 'Chef'
+  },
+  {
+    name: 'Tahmina Rumi',
+    role: 'Chef'
+  },
+  {
+    name: 'Tahmina Rumi',
+    role: 'Chef'
+  },
+  {
+    name: 'Tahmina Rumi',
+    role: 'Chef'
+  },
+  {
+    name: 'Tahmina Rumi',
+    role: 'Chef'
+  },
+  {
+    name: 'Tahmina Rumi',
+    role: 'Chef'
+  },
+  {
+    name: 'Tahmina Rumi',
+    role: 'Chef'
+  },
+  {
+    name: 'Tahmina Rumi',
+    role: 'Chef'
+  },
+  {
+    name: 'Tahmina Rumi',
+    role: 'Chef'
+  },
+  
+]

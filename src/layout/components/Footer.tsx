@@ -18,7 +18,7 @@ const INSTAGRAM_GALLERY = [
  
 const Footer = () => {
   return (
-    <footer className='bg-disabledGreen w-screen absolute -z-10 left-0 pt-32'>
+    <footer className='bg-disabledGreen w-screen absolute -z-10 left-0 pt-32 mt-32'>
       <img src='/textures/limb_big.png' alt="limb" 
         className="absolute -top-56 left-0"/>
       <img src='/textures/cauliflower.png' alt='cauliflower' 

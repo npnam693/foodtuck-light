@@ -7,7 +7,12 @@ import DetailProduct from "../pages/DetailProduct"
 import ShoppingCart from "../pages/Cart"
 import Blog from "../pages/Blog"
 import DetailBlog from "../pages/DetailBlog"
-
+import AboutUs from "../pages/AboutUs"
+import OurChef from "../pages/ourChef"
+import Checkout from "../pages/checkout"
+import FAQ from "../pages/faq"
+import LogIn from "../pages/logIn"
+import SignUp from "../pages/signUp"
 const GeneralRoutes : Array<IRoutesProps> = [
     {
         path: '/',  
@@ -26,7 +31,7 @@ const GeneralRoutes : Array<IRoutesProps> = [
     },
     {
         path: '/about',
-        element: <div>About</div> ,
+        element: <AboutUs /> ,
         title: 'About',
     },
     {
@@ -34,6 +39,32 @@ const GeneralRoutes : Array<IRoutesProps> = [
         element: <Shop/> ,
         title: "Shop"
     },
+    {
+        path: '/chef',
+        element: <OurChef />,
+        title: 'Chef'
+    },
+    {
+        path: '/login',
+        element: <LogIn />,
+        title: 'Login'
+    },
+    {
+        path: '/signup',
+        element: <SignUp />,
+        title: 'SignUp'
+    },
+    {
+        path: '/faq',
+        element: <FAQ />,
+        title: 'FAQ'
+    },
+    {
+        path: '/cart/checkout',
+        element: <Checkout />,
+        title: 'Chef'
+    },
+
     {
         path: '/detail-product/:id',
         element: <DetailProduct />,
@@ -48,7 +79,7 @@ const GeneralRoutes : Array<IRoutesProps> = [
         path: 'blog/:id',
         element: <DetailBlog />,
         title: "Detail Blog"
-    }
+    },
 ]
 
 export default GeneralRoutes

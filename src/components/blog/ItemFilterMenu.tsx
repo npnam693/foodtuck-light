@@ -12,7 +12,6 @@ const ItemFilterMenu = ({image, name, qty} : {
         <p className='text-[#333] font-bold text-base'>{name}</p>
 
         <p className='text-[#333] text-base ml-auto'>{qty}</p>
-        
     </div>
   )
 }

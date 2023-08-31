@@ -8,7 +8,7 @@ const ItemMember = ({image, name, role} : {
 }) => {
   return (
     <div className="relative group">
-        <img src={image} alt={name} loading="lazy" className="group-hover:brightness-50"/>
+        <img src={image} alt={name} loading="lazy" className="group-hover:brightness-50 w-full"/>
         <p className="text-center  font-bold text-xl text-[#4f4f4f] mt-4">{name}</p>
         <p className="text-center  text-[#828282] mb-4">{role}</p>
 

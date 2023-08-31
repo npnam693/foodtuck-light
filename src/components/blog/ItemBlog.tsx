@@ -17,7 +17,7 @@ const ItemBlog = ({image, date, qtyComments, creator,  title, desc} : {
         <div className={`w-[870px] relative ${id === undefined && 'cursor-pointer hover:shadow-2xl'} `}
             onClick={() => id === undefined && navigate('/blog/1')}
         >
-                <img src={image} alt="blog" className="h-[520px] w-[870px] object-cover"/>
+            <img src={image} alt="blog" className="h-[520px] w-[870px] object-cover"/>
             <div className='rounded-md bg-primary absolute top-5 left-5 px-6 py-3 flex items-center flex-col'>
                 <p className='font-bold text-lg text-white'>14</p>
                 <p className='text-white'>Feb</p>

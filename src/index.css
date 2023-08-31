@@ -119,3 +119,15 @@
     min-width: 70px !important;
 
 }
+
+/* Select - [Checkout] */
+.overide-select--checkout .ant-select-selector {
+    width: 100%;
+    height: 56px !important;
+    border-radius: 0px;
+}
+.overide-select--checkout .ant-select-selection-item {
+    display: flex;
+    align-items: center;
+}
+
