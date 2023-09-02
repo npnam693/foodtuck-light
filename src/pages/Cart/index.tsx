@@ -15,10 +15,9 @@ const ShoppingCart = () => {
             <div className='p-6 border border-[#e0e0e0] rounded-md'>
               <p className='mb-6 text-lg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non</p>
               <Input
-                addonAfter={<p>Apply</p>}
+                addonAfter={<p className='h-14 flex items-center justify-center w-[90px] text-lg'>Apply</p>}
                 placeholder="Enter Code Here"
-                className="overide_input w-full rounded-none"
-                size="large"
+                className="overide-input--cart w-full rounded-none h-14"
               />
             </div>
           </div>
@@ -31,7 +30,7 @@ const ShoppingCart = () => {
               <p className='flex justify-between font-bold text-xl text-[#333]'>Total Amount <span>$250.00</span></p>
             </div>
             <Button className='flex mt-6 items-center justify-center rounded-none h-14 text-base w-full
-            text-white bg-primary '>
+            text-white bg-primary hover:!bg-[#248001]' type='primary'> 
               Proceed to Checkout 
               <SelectOutlined /> 
             </Button>

@@ -16,7 +16,7 @@ const HomeReview = () => {
                 Customer Review
             </p>
 
-            <img src='./decoration/quotes.png' alt='quotes' className='mb-8' />
+            <img src='/textures/quotes.png' alt='quotes' className='mb-8' />
 
             <p className="text-base text-content mb-12">Lorem ipsum dolor sit amet, 
             consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui 

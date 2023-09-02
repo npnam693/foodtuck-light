@@ -7,7 +7,11 @@ export default {
   theme: {
     content: {
       'star': "url('/textures/stars.png')",
-      'limb': "url('/textures/limb.png')"
+      'limb': "url('/textures/limb.png')",
+      'dish': "url('/images/home/dish_1.png)",
+      'dish2': "url('/images/home/dish_2.png)",
+      'dish3': "url('/images/home/dish_3.png)",
+      'dish4': "url('/images/home/dish_4.png)",
     },
     colors: {
       'primary': '#195A00',

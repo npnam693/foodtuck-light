@@ -2,11 +2,12 @@ import ItemMember from "../../../components/home/ItemMember"
 
 const HomeTeam = () => {
   return (
-    <section className="mt-24 flex flex-col items-center">
-        <div className="absolute w-screen">
+    <section className="mt-24 flex flex-col items-center overflow-x-hidden">
+        <div className="absolute w-full">
             <img src='/textures/cabbage.png' alt='team' loading="lazy" className="absolute right-0 z-10 -top-[380px]"/>
             <img src='/images/background/bg-team.png' alt='bg-team' loading="lazy" className="w-screen absolute"/>
         </div>
+        
         <div className="relative mt-40">
             <p className="font-bold text-5xl text-white font-san mb-2 text-center
             after:block after:content-limb after:bottom-10 after:right-32 after:absolute

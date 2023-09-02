@@ -3,11 +3,13 @@ import Footer from './components/Footer'
 
 const DefaultLayout = ({children} : {children : React.ReactNode}) => {
   return (
-    <div className='px-[300px] pt-[50px] overflow-x-hidden overflow-hidden'>
+    <>
       <Header />
+      <main className='px-[10%]'>
       {children}
+      </main>
       <Footer />
-    </div>
+    </>
   )
 }
 

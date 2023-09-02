@@ -40,9 +40,9 @@ const GeneralRoutes : Array<IRoutesProps> = [
         title: "Shop"
     },
     {
-        path: '/chef',
+        path: '/team',
         element: <OurChef />,
-        title: 'Chef'
+        title: 'Team'
     },
     {
         path: '/login',
@@ -60,6 +60,11 @@ const GeneralRoutes : Array<IRoutesProps> = [
         title: 'FAQ'
     },
     {
+        path: 'cart',
+        element: <ShoppingCart />,
+        title: "Shopping Cart"
+    },
+    {
         path: '/cart/checkout',
         element: <Checkout />,
         title: 'Chef'
@@ -69,11 +74,6 @@ const GeneralRoutes : Array<IRoutesProps> = [
         path: '/detail-product/:id',
         element: <DetailProduct />,
         title: 'Detail Product'
-    },
-    {
-        path: 'shopping-cart',
-        element: <ShoppingCart />,
-        title: "Shopping Cart"
     },
     {
         path: 'blog/:id',

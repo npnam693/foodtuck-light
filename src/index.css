@@ -131,3 +131,89 @@
     align-items: center;
 }
 
+
+
+/* Input Number [Cart] */
+.overide-input--qty-cart .ant-input-number-group-addon {
+    border-radius: 100px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+.overide-input--qty-cart .ant-input-number-group-addon:hover {
+    background-color: rgba(168,188,161,.3) !important;
+    border: 1px solid #195A00;
+    transition-delay: 75ms;
+}
+
+.overide-input--qty-cart .ant-input-number:hover {
+    border: 1px solid #195A00;
+}
+.overide-input--qty-cart .ant-input-number-focused {
+    border: 1px solid #195A00;
+}
+
+.overide-input--qty-cart .ant-input-number-input-wrap {
+    width: 50px;
+    margin-top: auto;
+    padding: 0 10px 0 10px;
+    margin-bottom: auto;
+} 
+
+.overide-input--qty-detail .ant-input-number-input {
+    text-align: center;
+    line-height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 16px;
+} 
+
+/* Input_Apply [Cart] */
+
+.overide-input--cart .ant-input {
+    height: 56px;
+}
+
+.overide-input--cart .ant-input-group-addon {
+    background-color: #195A00;
+    color:white;
+    cursor: pointer;
+}
+.overide-input--cart .ant-input-group-addon:hover {
+    background-color: #248001;
+}
+
+
+/* ////////////////////////////////// */
+
+
+.spin-1 {
+    animation: spin-1 0.7s linear 1;
+}
+.spin-2 {
+    animation: spin-2 0.7s linear 1 ;
+}
+.spin-3 {
+    animation: spin-3 0.7s linear 1 ;
+}
+
+
+.dish-item--1 {
+    animation: spin-1 0.7s linear 1;
+}
+
+
+
+
+.spin-1-1 {
+    animation: spin-1-1 0.7s linear 1;
+}
+
+@keyframes spin-1-1 {
+    from {
+    }
+    to {
+        transform: rotate(200);
+    }
+}

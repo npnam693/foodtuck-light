@@ -1,4 +1,5 @@
 import { SearchOutlined, ShoppingOutlined, UserOutlined } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
 
 interface ISitemap {
     title: string;
@@ -8,6 +9,7 @@ interface ISitemap {
 interface IAction {
   title: string;
   icon?: React.ReactElement;
+  path?: string;
 }
 
 export const HEADER_SITEMAP : Array<ISitemap>= [
@@ -44,15 +46,17 @@ export const HEADER_SITEMAP : Array<ISitemap>= [
 export const HEADER_ACTION : Array<IAction> = [
   {
     title: 'Search',
-    icon: <UserOutlined />
+    icon: <SearchOutlined />,
   },
   {
     title: "Cart",
-    icon: <ShoppingOutlined />
+    icon: <ShoppingOutlined />,
+    path: '/cart'
   },
   {
-    title: "Search",
-    icon: <SearchOutlined />
+    title: "Person",
+    icon: <UserOutlined />,
+    path: '/login'
   }
 ] 
 

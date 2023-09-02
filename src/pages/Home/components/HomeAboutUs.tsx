@@ -1,7 +1,10 @@
 import { PlayCircleOutlined } from "@ant-design/icons"
 import { Button } from "antd"
+import { useNavigate } from "react-router-dom"
 
 const HomeAboutUs = () => {
+  const navigate = useNavigate();
+
   return (
     <section  className="flex justify-between items-center mt-24">
       <div className="flex gap-5  min-w-[670px]">
@@ -28,7 +31,11 @@ const HomeAboutUs = () => {
         Lacus nisi, et ac dapibus sit eu velit in consequat.</p>
 
         <div className="flex">
-          <Button type="primary" className="bg-primary font-bold mr-4 h-14 w-52 text-lg">Show more</Button>
+          <Button type="primary" className="bg-primary font-bold mr-4 h-14 w-52 text-lg"
+            onClick={() => navigate('/about')}
+          >
+            Show more
+          </Button>
           <div className="flex items-center ">
             <Button type="primary" shape="circle" className="bg-primary !h-14 !w-14 mr-3" icon={<PlayCircleOutlined className="!text-3xl"/>}/>
             <p className="text-text font-bold">Watch video</p>
