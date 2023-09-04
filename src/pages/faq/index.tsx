@@ -1,4 +1,3 @@
-import React from 'react'
 import CoverPage from '../../components/CoverPage'
 import { PlusOutlined } from '@ant-design/icons'
 

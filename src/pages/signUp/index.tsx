@@ -1,4 +1,3 @@
-import React from 'react'
 import CoverPage from '../../components/CoverPage'
 import { Button, Checkbox, Input } from 'antd'
 import { LockOutlined, MailOutlined, UserOutlined } from '@ant-design/icons'

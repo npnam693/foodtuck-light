@@ -18,7 +18,7 @@ const HomeBlogs = () => {
       <div className='flex gap-x-5 '>
         {
           dataBlogs.map((item, index : number) => (
-            <ItemBlogHome key={index} image={item.image} title={item.title} desc={item.desc} date={item.date} qtyComment={item.qtyComment} />
+            <ItemBlogHome key={index} image={item.image} title={item.title} desc={item.desc} date={item.date} qtyComment={item.qtyComments} />
           ))
         }
       </div>

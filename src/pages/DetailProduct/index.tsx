@@ -13,8 +13,9 @@ const DetailProduct = () => {
     const [product, setProduct] = useState(dataFoods[String(id)])
     const [qty, setQty] = useState<valueType | null>(1)
 
-    
+
     useEffect(() => {
+        setProduct(dataFoods[String(id)])
     }, [])
 
     return (
@@ -111,8 +112,8 @@ const DetailProduct = () => {
                 <Segmented options={['Description', `Review (${product.qtyReview})`]} 
                     className="overide-segmented--detail bg-white mb-8 h-[50px]"/>
                 {
-                    product.desc.map((item, index : number) => { return (
-                        <p className="mb-3">{item}</p>
+                    product.desc.map(( item, index : number ) => { return (
+                        <p className="mb-3" key={index}>{item}</p>
                     )})
                 }
             </section>

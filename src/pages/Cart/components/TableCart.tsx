@@ -1,6 +1,6 @@
 import { dataCart } from "../../../data"
 import { dataFoods } from "../../../components/ItemFood"
-import { Divider, InputNumber, Rate } from "antd"
+import { InputNumber, Rate } from "antd"
 import { CloseOutlined, MinusOutlined, PlusOutlined } from "@ant-design/icons"
 import React from "react"
 

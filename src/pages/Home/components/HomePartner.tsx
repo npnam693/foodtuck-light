@@ -1,4 +1,3 @@
-import React from 'react'
 const dataPartners = [
     {
         image: "./images/home/partner_1.png"

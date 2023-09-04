@@ -1,4 +1,3 @@
-import { useParams } from 'react-router-dom'
 import { FacebookFilled, InstagramFilled, TwitterOutlined, YoutubeFilled } from '@ant-design/icons'
 
 import CoverPage from '../../components/CoverPage'
@@ -11,7 +10,6 @@ import TextArea from 'antd/es/input/TextArea'
 
 
 const DetailBlog = () => {
-    const {id} = useParams()
     const dataBlog = dataBlogs[0]
     return (
     <article>

@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 import { HEADER_SITEMAP, HEADER_ACTION} from "../../constant/sitemap"
 import React from "react";

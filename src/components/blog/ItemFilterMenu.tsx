@@ -1,4 +1,3 @@
-import React from 'react'
 
 const ItemFilterMenu = ({image, name, qty} : {
     image: string,

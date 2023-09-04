@@ -85,39 +85,38 @@ const HomeIntroduce = () => {
         <div className="relative w-[600px] h-[600px] border-2 border-text rounded-full z-0 mr-24">
           <img src='/images/background/bg-dish.png' alt="bg-dish" className="absolute -bottom-40 -right-64 w-[800px] rotate -z-10"/>
           <div>
-            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all duration-[1500ms] ${itemsPosition[0] === 0 && 'z-[-5]'}`}
+            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all ease-in-out duration-[1s] ${itemsPosition[0] === 0 && 'z-[-5]'}`}
               style={{transform: `rotate(${itemsAngle[0]}deg)`}}
             > 
-              <img src={demoDish[0]} alt="dish0" className={`absolute bg-cover cursor-pointer transition-all duration-[1500ms] ${itemsPosition[0] === 0 && 'cursor-default'} `}
+              <img src={demoDish[0]} alt="dish0" className={`absolute bg-cover cursor-pointer transition-all ease-in-out duration-[1s] ${itemsPosition[0] === 0 && 'cursor-default'} `}
                 style={{top: cssProps[itemsPosition[0]].top, right: cssProps[itemsPosition[0]].right, width: cssProps[itemsPosition[0]].width, height: cssProps[itemsPosition[0]].height}}
                 onClick={() => handleClickDish(0)}
               />
             </div>
 
-
-            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all duration-[1500ms] ${itemsPosition[1] === 0 && 'z-[-5]'} `}
+            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all ease-in-out duration-[1s] ${itemsPosition[1] === 0 && 'z-[-5]'} `}
               style={{transform: `rotate(${itemsAngle[1]}deg)`}}
             > 
-              <img src={demoDish[1]} alt="dish0" className={`absolute bg-cover cursor-pointer transition-all duration-[1500ms] ${itemsPosition[1] === 0 && 'cursor-default'} `}
+              <img src={demoDish[1]} alt="dish0" className={`absolute bg-cover cursor-pointer transition-all ease-in-out duration-[1s] ${itemsPosition[1] === 0 && 'cursor-default'} `}
                 style={{top: cssProps[itemsPosition[1]].top, right: cssProps[itemsPosition[1]].right, width: cssProps[itemsPosition[1]].width, height: cssProps[itemsPosition[1]].height}}
                 onClick={() => handleClickDish(1)}
               />
             </div>
 
-            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all duration-[1500ms] ${itemsPosition[2] === 0 && 'z-[-5]'} `}
+            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all ease-in-out duration-[1s] ${itemsPosition[2] === 0 && 'z-[-5]'} `}
               style={{transform: `rotate(${itemsAngle[2]}deg)`}}
             > 
-              <img src={demoDish[2]} alt="dish0" className={`absolute bg-cover cursor-pointer transition-all duration-[1500ms] ${itemsPosition[2] === 0 && 'cursor-default'} `}
+              <img src={demoDish[2]} alt="dish0" className={`absolute bg-cover cursor-pointer transition-all ease-in-out duration-[1s] ${itemsPosition[2] === 0 && 'cursor-default'} `}
                 style={{top: cssProps[itemsPosition[2]].top, right: cssProps[itemsPosition[2]].right, width: cssProps[itemsPosition[2]].width, height: cssProps[itemsPosition[2]].height}}
                 onClick={() => handleClickDish(2)}
               />
             </div>
 
-            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all duration-[1500ms] ${itemsPosition[3] === 0 && 'z-[-5]'}`}
+            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all ease-in-out duration-[1s] ${itemsPosition[3] === 0 && 'z-[-5]'}`}
               style={{transform: `rotate(${itemsAngle[3]}deg)`}}
            
            > 
-              <img src={demoDish[3]} alt="dish0" className={`absolute bg-cover cursor-pointer transition-all duration-[1500ms] ${itemsPosition[3] === 0 && 'cursor-default'} `}
+              <img src={demoDish[3]} alt="dish0" className={`absolute bg-cover cursor-pointer transition-all ease-in-out duration-[1s] ${itemsPosition[3] === 0 && 'cursor-default'} `}
                 style={{top: cssProps[itemsPosition[3]].top, right: cssProps[itemsPosition[3]].right, width: cssProps[itemsPosition[3]].width, height: cssProps[itemsPosition[3]].height}}
                 onClick={() => handleClickDish(3)}
              />

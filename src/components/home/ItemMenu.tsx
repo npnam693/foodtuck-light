@@ -1,5 +1,3 @@
-import React from 'react'
-
 const ItemMenu = () => {
   return (
     <div className='flex flex-row w-full justify-between mb-6

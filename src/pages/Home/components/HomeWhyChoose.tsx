@@ -1,4 +1,3 @@
-import React from 'react'
 import ItemWhyChoose from '../../../components/home/ItemWhyChoose'
 import { CarOutlined } from '@ant-design/icons'
 
