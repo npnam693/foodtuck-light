@@ -39,9 +39,10 @@ const Shop = () => {
             </div>
         </section>
 
-        <section className='flex'>
-            <div className='flex flex-col items-center'>
-                <div className='flex flex-wrap gap-6'>
+        <section className='flex gap-x-10'>
+
+            <div className='basis-9/12 flex flex-col items-center'>
+                <div className='grid sm:grid-cols-1 lg:grid-cols-2  2xl:grid-cols-3 3xl:grid-cols-3 4xl:grid-cols-4 gap-10 w-full'>
                     <ItemFood id="1"/>
                     <ItemFood id="1"/>
                     <ItemFood id="1"/>
@@ -61,7 +62,7 @@ const Shop = () => {
                 <ShopPagination qtyPage={5} currentPage={1}/>
             </div>
 
-            <div className='min-w-[312px] h-5 bg-65'>
+            <div className='basis-3/12 h-5 bg-65'>
                 <ShopSideBar />
             </div>
         </section>

@@ -25,7 +25,7 @@ const ShopSideBar = () => {
 
 
     return (
-    <aside className='py-6 px-9 shadow-md'>
+    <aside className='py-6 px-9 shadow-inner'>
         <Input.Search placeholder="Search Product" onSearch={() => {}} size='large'
             className='overide-shop-search'
         />

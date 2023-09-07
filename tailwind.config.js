@@ -26,7 +26,12 @@ export default {
       'inter': ['Inter', 'sans-serif'],
       'attractive': ['Miniver', 'cursive']
     }, 
-    extend: {},
+    extend: {
+      screens: {
+        '3xl': '1920px',
+        '4xl': '2240px'
+      }
+    },
   },
   plugins: [],
 }

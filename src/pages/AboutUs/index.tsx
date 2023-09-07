@@ -1,7 +1,8 @@
 import CoverPage from "../../components/CoverPage"
-import HomeAboutUs from "../Home/components/HomeAboutUs"
-import HomeMenu from "../Home/components/HomeMenu"
-import HomeTeam from "../Home/components/HomeTeam"
+import HomeAboutUs from "../home/components/HomeAboutUs"
+import HomeMenu from "../home/components/HomeMenu"
+import HomeTeam from "../home/components/HomeTeam"
+
 import AboutClientSay from "./components/AboutClientSay"
 import AboutWhyChoose from "./components/AboutWhyChoose"
 

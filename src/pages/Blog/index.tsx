@@ -6,13 +6,13 @@ const Blog = () => {
     <div>
       <CoverPage currentPage='Blog' title='Blog List' listPath={[{title: 'Home', path:'/'}]}/>
 
-      <div className='flex justify-between gap-10'>
+      <div className='flex justify-between gap-10 lg:flex-row flex-col'>
         
-        <section className='w-8/12 flex flex-col gap-y-14 grow-0'>
+        <section className='lg:w-8/12 w-full  flex flex-col gap-y-14 grow-0'>
           <BlogList />
         </section>
 
-        <aside className='w-4/12 grow-0'>
+        <aside className='lg:w-4/12 w-full grow-0'>
           <BlogSidebar />
         </aside>
       </div>

@@ -14,11 +14,11 @@ const INSTAGRAM_GALLERY = [
  
 const Footer = () => {
   return (
-    <footer className='w-full'>
-      <div className="bg-disabledGreen pt-32 relative px-[10vw]">
+    <footer className='w-full mt-10'>
+      <div className="bg-disabledGreen lg:pt-32 pt-10 relative px-[10vw]">
         <img src='/textures/limb_big.png' alt="limb" className="absolute -top-56 left-0" />
         <img src='/textures/cauliflower.png' alt='cauliflower' className="right-0 absolute -bottom-16" />
-        <div className="flex justify-between ">
+        <div className="lg:flex lg:justify-between lg:flex-row flex flex-col gap-y-6">
           <div className="w-64">
             <p className="font-sans text-2xl font-bold mr-16 mb-6">F
               <span className="text-primary">oo</span>
@@ -41,8 +41,8 @@ const Footer = () => {
             <p className="text-[#333] text-lg">Sun - Sat / 10:00 AM - 8:00 PM</p>
           </div>
 
-          <div className="flex flex-col gap-y-4">
-            <p className="font-bold text-[#333] text-xl mb-2">Links</p>
+          <div className="flex flex-col gap-y-4 max-lg:flex-row max-lg:flex-wrap max-lg:gap-x-20">
+            <p className="font-bold text-[#333] text-xl mb-2 max-lg: w-full">Links</p>
             {
               FOOTER_SITEMAP.map((item,index) => (
                 <Link to={item.path} key={index}>
@@ -66,7 +66,7 @@ const Footer = () => {
       </div>
       
 
-      <div className='bg-primary px-[10vw]  flex h-16 items-center text-white'>
+      <div className='bg-primary px-[10vw]  block w-full min-h-[64px] items-center text-white'>
         <p>Copyright © 2000-2020.logo.com. All rights reserved</p>
 
         <div className="flex ml-auto gap-x-6">

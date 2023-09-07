@@ -141,11 +141,11 @@
 }
 
 
-.overide-input--qty-cart .ant-input-number-group-addon:hover {
+/* .overide-input--qty-cart .ant-input-number-group-addon:hover {
     background-color: rgba(168,188,161,.3) !important;
     border: 1px solid #195A00;
     transition-delay: 75ms;
-}
+} */
 
 .overide-input--qty-cart .ant-input-number:hover {
     border: 1px solid #195A00;
@@ -155,13 +155,14 @@
 }
 
 .overide-input--qty-cart .ant-input-number-input-wrap {
-    width: 50px;
+    min-width: 60px;
     margin-top: auto;
     padding: 0 10px 0 10px;
     margin-bottom: auto;
 } 
 
 .overide-input--qty-detail .ant-input-number-input {
+    width: 100%;
     text-align: center;
     line-height: 100%;
     margin-top: auto;
@@ -186,34 +187,60 @@
 
 
 /* ////////////////////////////////// */
-
-
-.spin-1 {
-    animation: spin-1 0.7s linear 1;
-}
-.spin-2 {
-    animation: spin-2 0.7s linear 1 ;
-}
-.spin-3 {
-    animation: spin-3 0.7s linear 1 ;
+img {
+    user-select: none;
+    -webkit-user-select: none;
 }
 
+/* ////////////////////////////////// */
 
-.dish-item--1 {
-    animation: spin-1 0.7s linear 1;
+
+.animate-fadeout {
+    animation: fadeOut 500ms ease-in-out;
 }
 
-
-
-
-.spin-1-1 {
-    animation: spin-1-1 0.7s linear 1;
+.animate-fadeout-bt {
+    animation: fadeOutBT 500ms ease-in-out;
 }
 
-@keyframes spin-1-1 {
+@keyframes fadeOut {
     from {
+        right: 100px;
+        opacity: 0.2
     }
     to {
-        transform: rotate(200);
+        right: 0;
+        opacity: 1;
     }
+}
+
+@keyframes fadeOutBT {
+    from {
+        top: 50px;
+        opacity: 0.2
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/* .............. */
+
+.slick-arrow.slick-next, .slick-arrow.slick-prev {
+    background-color: #195A00 !important;
+    display: block !important;
+    width: 50px !important;
+    height: 50px !important;
+    color: red !important;
+}
+
+.slick-arrow.slick-next {
+    right: -80px !important;
+}.slick-arrow.slick-prev {
+    left: -80px !important;
+}
+.slick-arrow.slick-next:hover, .slick-arrow.slick-prev:hover {
+    display: block !important;
+    background-color: #248001 !important;
 }

@@ -1,42 +1,40 @@
 import { Button } from "antd"
 import React from "react"
 import '../../animation.css'
+import { useNavigate } from "react-router-dom"
 const demoDish = ['/images/home/dish_1.png', '/images/home/dish_2.png', '/images/home/dish_3.png', '/images/home/dish_4.png']
 
 
 
-const cssProps = [
+
+const circleCss = [
   {
-    angle: 0,
-    top: -300,
-    right: -80,
-    width: 650,
-    height: 650
+    angle: 'rotate-0',
+    tsl: 'translate-x-[15%] -translate-y-[48%]',
+    width: 'w-[560px] max-sm:w-[200px] max-lg:w-[350px]',
+    lgWidth: ''
   },
   {
-    angle: 140,
-    top: -32,
-    right: -32,
-    width: 16*4,
-    height: 16*4
+    angle: 'rotate-[140deg]',
+    tsl: 'translate-x-1/2 -translate-y-1/2',
+    width: 'w-16 max-sm:w-10 max-lg:w-14',
   },
   {
-    angle: 180,
-    top: -48,
-    right: -48,
-    width: 24*4,
-    height: 24*4
+    angle: 'rotate-[180deg]',
+    tsl: 'translate-x-1/2 -translate-y-1/2',
+    width: 'w-24 max-sm:w-14 max-lg:w-20',
   },
   {
-    angle: 220,
-    top: -64,
-    right: -64,
-    width: 32*4,
-    height: 32*4
-  },
+    angle: 'rotate-[220deg]',
+    tsl: 'translate-x-1/2 -translate-y-1/2',
+    width: 'w-32 max-sm:w-20 max-lg:w-28',
+  }
 ]
 
+
 const HomeIntroduce = () => {
+  const navigate = useNavigate()
+
   // index: image static, value: image position 
   const [itemsPosition, setItemsPosition] = React.useState<Array<number>>([0,1,2,3])
 
@@ -62,72 +60,69 @@ const HomeIntroduce = () => {
   }
 
   return (
-    <section className="h-[calc(100vh-42px)] flex flex-col justify-center">
-      <div className="flex items-center justify-between pb-24">
-        <div className="w-[525px]">
+    <section className="h-[calc(100vh-42px)] flex flex-col justify-center max-lg:h-auto ">
+      <div className="flex items-center justify-between pb-24 max-lg:flex-col-reverse">
+        <div className="w-[525px] max-lg:w-full max-lg:mt-10">
             <span className="relative font-attractive mb-2 text-lg text-primary
               after:block after:w-7 after:h-[1px] after:bg-primary 
               after:-right-14 after:bottom-2 after:absolute">
               Healthy & Testy Food
             </span>
             
-            <p className="font-bold text-6xl text-text font-sans mb-8
-              after:inline-block after:content-star after:relative after:-bottom-8">
+            <p className="font-bold text-6xl text-text font-sans mb-8 max-lg:text-3xl max-lg:mb-2 
+              after:inline-block after:content-star after:relative after:-bottom-8 after:max-lg:hidden">
               Enjoy Healthy Life & Testy Food.
             </p>
             
             <p className="text-base text-content mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
             Varius sed pharetra dictum neque massa congue </p>
             
-            <Button type="primary" className="bg-primary font-bold mr-4 h-14 w-52 text-lg">Show more</Button>
-            <Button type="default" className="border-primary  text-primary font-bold h-14 w-56 text-lg">Place an order</Button>
+            <Button type="primary" onClick={() => navigate('/menu')}className="bg-primary font-bold mr-4 h-14 w-52 text-lg max-xl:w-32">Show more</Button>
+            <Button type="default" onClick={() => navigate('/shop')}className="border-primary  text-primary font-bold h-14 w-56 text-lg max-lg:w-36">Place an order</Button>
         </div>
-        <div className="relative w-[600px] h-[600px] border-2 border-text rounded-full z-0 mr-24">
-          <img src='/images/background/bg-dish.png' alt="bg-dish" className="absolute -bottom-40 -right-64 w-[800px] rotate -z-10"/>
+
+        <div className="relative w-[600px] h-[600px] border-2 border-text rounded-full z-0 mr-24 max-lg:w-[60vw] max-lg:h-[60vw] max-lg:ml-auto max-lg:mr-auto max-lg:mt-10 max-lg:scale-100">
+          <img src='/images/background/bg-dish.png' alt="bg-dish" className="absolute -bottom-40 -right-64 w-[800px] rotate -z-10 "/>
           <div>
-            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all ease-in-out duration-[1s] ${itemsPosition[0] === 0 && 'z-[-5]'}`}
+            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all duration-[1.8s] ${itemsPosition[0] === 0 && 'z-[-5]'}`}
               style={{transform: `rotate(${itemsAngle[0]}deg)`}}
             > 
-              <img src={demoDish[0]} alt="dish0" className={`absolute bg-cover cursor-pointer transition-all ease-in-out duration-[1s] ${itemsPosition[0] === 0 && 'cursor-default'} `}
-                style={{top: cssProps[itemsPosition[0]].top, right: cssProps[itemsPosition[0]].right, width: cssProps[itemsPosition[0]].width, height: cssProps[itemsPosition[0]].height}}
+              <img src={demoDish[0]} alt="dish0" className={`absolute right-0 bg-cover cursor-pointer transition-all duration-[1.8s] ${circleCss[itemsPosition[0]].tsl} ${circleCss[itemsPosition[0]].width} ${circleCss[itemsPosition[0]].lgWidth} ${itemsPosition[0] === 0 && 'cursor-default'}`}
                 onClick={() => handleClickDish(0)}
               />
             </div>
 
-            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all ease-in-out duration-[1s] ${itemsPosition[1] === 0 && 'z-[-5]'} `}
+            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all duration-[1.8s] ${itemsPosition[1] === 0 && 'z-[-5]'} `}
               style={{transform: `rotate(${itemsAngle[1]}deg)`}}
             > 
-              <img src={demoDish[1]} alt="dish0" className={`absolute bg-cover cursor-pointer transition-all ease-in-out duration-[1s] ${itemsPosition[1] === 0 && 'cursor-default'} `}
-                style={{top: cssProps[itemsPosition[1]].top, right: cssProps[itemsPosition[1]].right, width: cssProps[itemsPosition[1]].width, height: cssProps[itemsPosition[1]].height}}
+              <img src={demoDish[1]} alt="dish0" className={`absolute right-0 bg-cover cursor-pointer transition-all duration-[1.8s]  ${itemsPosition[1] === 0 && 'cursor-default '} ${circleCss[itemsPosition[1]].tsl} ${circleCss[itemsPosition[1]].width} ${circleCss[itemsPosition[1]].lgWidth} `}
                 onClick={() => handleClickDish(1)}
               />
             </div>
 
-            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all ease-in-out duration-[1s] ${itemsPosition[2] === 0 && 'z-[-5]'} `}
+            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all duration-[1.8s] ${itemsPosition[2] === 0 && 'z-[-5]'} `}
               style={{transform: `rotate(${itemsAngle[2]}deg)`}}
             > 
-              <img src={demoDish[2]} alt="dish0" className={`absolute bg-cover cursor-pointer transition-all ease-in-out duration-[1s] ${itemsPosition[2] === 0 && 'cursor-default'} `}
-                style={{top: cssProps[itemsPosition[2]].top, right: cssProps[itemsPosition[2]].right, width: cssProps[itemsPosition[2]].width, height: cssProps[itemsPosition[2]].height}}
+              <img src={demoDish[2]} alt="dish0" className={`absolute right-0 bg-cover cursor-pointer transition-all duration-[1.8s]  ${itemsPosition[2] === 0 && 'cursor-default '} ${circleCss[itemsPosition[2]].tsl} ${circleCss[itemsPosition[2]].width} ${circleCss[itemsPosition[2]].lgWidth}`}
                 onClick={() => handleClickDish(2)}
               />
             </div>
 
-            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all ease-in-out duration-[1s] ${itemsPosition[3] === 0 && 'z-[-5]'}`}
+            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all duration-[1.8s] ${itemsPosition[3] === 0 && 'z-[-5]'} roate`}
               style={{transform: `rotate(${itemsAngle[3]}deg)`}}
            
            > 
-              <img src={demoDish[3]} alt="dish0" className={`absolute bg-cover cursor-pointer transition-all ease-in-out duration-[1s] ${itemsPosition[3] === 0 && 'cursor-default'} `}
-                style={{top: cssProps[itemsPosition[3]].top, right: cssProps[itemsPosition[3]].right, width: cssProps[itemsPosition[3]].width, height: cssProps[itemsPosition[3]].height}}
+              <img src={demoDish[3]} alt="dish0" className={`absolute right-0 bg-cover cursor-pointer transition-all duration-[1.8s]  ${itemsPosition[3] === 0 && 'cursor-default '} ${circleCss[itemsPosition[3]].tsl} ${circleCss[itemsPosition[3]].width} ${circleCss[itemsPosition[3]].lgWidth}`}
                 onClick={() => handleClickDish(3)}
              />
             </div>
           </div>
-      </div>
+        </div>
     </div>
 
 
 
-    <div className="self-center flex flex-col items-center absolute bottom-10 motion-safe:animate-bounce cursor-pointer"
+    <div className="self-center flex flex-col items-center absolute bottom-10 animate-bounce cursor-pointer max-lg:hidden"
       onClick={() => window.scrollTo({top: window.innerHeight, behavior: 'smooth'})}         
     >
         <p>Scrolldown</p>

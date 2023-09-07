@@ -25,18 +25,17 @@ const STATISTICS = [
 const MenuStatistics = () => {
   return (
     <section>
-        <div className="relative w-screen -left-[300px] bg-[url('./images/menu/bg-statictis.png')] h-[500px] bg-cover">
-            <div className="h-full bg-[rgba(0,0,0,.8)] flex justify-between px-[300px] items-center">
+        <div className="relative w-screen left-[-10vw] bg-[url('./images/menu/bg-statictis.png')] lg:h-[500px] h-[300px] bg-cover ">
+            <div className="h-full w-full bg-[rgba(0,0,0,.8)] flex justify-evenly px-0 items-center flex-wrap">
                 {
                     STATISTICS.map((item, index) => (
                         <div key={index}>
-                            <img src={item.image} alt={item.title} className="w-24 mx-auto" />
-                            <p className="text-white text-center mt-10 text-4xl font-bold">{item.amount}</p>
-                            <p className="text-white text-center text-2xl font-bold mt-5">{item.title}</p>
+                            <img src={item.image} alt={item.title} className="lg:w-24 w-16 mx-auto" />
+                            <p className="text-white text-center lg:mt-10 mt-2 lg:text-4xl text-2xl font-bold">{item.amount}</p>
+                            <p className="text-white text-center lg:text-2xl text-lg font-bold lg:mt-5 mt-1">{item.title}</p>
                         </div>
                     ))
                 }
-
             </div>
         </div>
     </section>

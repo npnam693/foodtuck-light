@@ -1,83 +1,99 @@
 import { IRoutesProps } from "../types/props"
+import React, {Suspense} from "react"
 
-import Home from "../pages/Home"
-import Menu from "../pages/Menu"
-import Shop from "../pages/Shop"
-import DetailProduct from "../pages/DetailProduct"
-import ShoppingCart from "../pages/Cart"
-import Blog from "../pages/Blog"
-import DetailBlog from "../pages/DetailBlog"
-import AboutUs from "../pages/AboutUs"
-import OurChef from "../pages/ourChef"
-import Checkout from "../pages/checkout"
-import FAQ from "../pages/faq"
-import LogIn from "../pages/logIn"
-import SignUp from "../pages/signUp"
+
+const OurChef = React.lazy(() => import("../pages/ourChef"))
+const Menu = React.lazy(() => import("../pages/menu"))
+const Checkout = React.lazy(() => import("../pages/checkout"))
+const FAQ = React.lazy(() => import("../pages/faq"))
+const LogIn = React.lazy(() => import("../pages/logIn"))
+const SignUp = React.lazy(() => import("../pages/signUp"))
+const Home = React.lazy(() => import("../pages/home"))
+const Blog = React.lazy(() => import("../pages/blog"))
+const AboutUs = React.lazy(() => import("../pages/aboutUs"))
+const Shop = React.lazy(() => import("../pages/shop"))
+const ShoppingCart = React.lazy(() => import("../pages/cart"))
+const DetailProduct = React.lazy(() => import("../pages/detailProduct"))
+const DetailBlog = React.lazy(() => import("../pages/detailBlog"))
+
+// import OurChef from "../pages/ourChef"
+// import Checkout from "../pages/checkout"
+// import FAQ from "../pages/faq"
+// import LogIn from "../pages/logIn"
+// import SignUp from "../pages/signUp"
+// import Home from "../pages/home"
+// import Blog from "../pages/blog"
+// import AboutUs from "../pages/aboutUs"
+// import Shop from "../pages/shop"
+// import ShoppingCart from "../pages/cart"
+// import DetailProduct from "../pages/detailProduct"
+// import DetailBlog from "../pages/detailBlog"
+// import Menu from "../pages/menu"
 const GeneralRoutes : Array<IRoutesProps> = [
     {
         path: '/',  
-        element: <Home />,
+        element: <Suspense> <Home /> </Suspense>,
         title: 'Home',
     },
     {
         path: '/menu',
-        element: <Menu /> ,
+        element: <Suspense> <Menu /> </Suspense>,
         title: 'Menu',
     },
     {
         path: '/blog',
-        element: <Blog />,
+        element: <Suspense> <Blog /> </Suspense>,
         title: 'Blog',
     },
     {
         path: '/about',
-        element: <AboutUs /> ,
+        element: <Suspense> <AboutUs /> </Suspense>,
         title: 'About',
     },
     {
         path: '/shop',
-        element: <Shop/> ,
+        element: <Suspense> <Shop/> </Suspense>,
         title: "Shop"
     },
     {
         path: '/team',
-        element: <OurChef />,
+        element: <Suspense> <OurChef /> </Suspense>,
         title: 'Team'
     },
     {
         path: '/login',
-        element: <LogIn />,
+        element: <Suspense> <LogIn /> </Suspense>,
         title: 'Login'
     },
     {
         path: '/signup',
-        element: <SignUp />,
+        element: <Suspense> <SignUp /> </Suspense>,
         title: 'SignUp'
     },
     {
         path: '/faq',
-        element: <FAQ />,
+        element: <Suspense> <FAQ /> </Suspense>,
         title: 'FAQ'
     },
     {
         path: 'cart',
-        element: <ShoppingCart />,
+        element: <Suspense> <ShoppingCart /> </Suspense>,
         title: "Shopping Cart"
     },
     {
         path: '/cart/checkout',
-        element: <Checkout />,
+        element: <Suspense> <Checkout /> </Suspense>,
         title: 'Chef'
     },
 
     {
         path: '/detail-product/:id',
-        element: <DetailProduct />,
+        element: <Suspense> <DetailProduct /> </Suspense>,
         title: 'Detail Product'
     },
     {
         path: 'blog/:id',
-        element: <DetailBlog />,
+        element: <Suspense> <DetailBlog /> </Suspense>,
         title: "Detail Blog"
     },
 ]

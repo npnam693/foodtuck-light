@@ -2,6 +2,7 @@ import { Button, Checkbox, Divider, Input, Select } from 'antd'
 import CoverPage from '../../components/CoverPage'
 import ItemFoodCheckout from '../../components/ItemFoodCheckout'
 import { ArrowRightOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons'
+import { useNavigate } from 'react-router-dom'
 
 const listFieldCheckout = [
     { name: "First name", type: "text"},
@@ -17,6 +18,7 @@ const listFieldCheckout = [
 ]
 
 const Checkout = () => {
+    const navigate = useNavigate();
   return (
     <div >
         <CoverPage title='Checkout Page' currentPage='Checkout' listPath={[{title: "Home", path: '/'}]}/>
@@ -54,7 +56,9 @@ const Checkout = () => {
 
                 <div className='mt-6 grid grid-cols-2 gap-5'>
                     <Button className='flex items-center justify-center rounded-none h-14 text-base text-[#4F4F4F]
-                        hover:!text-primary hover:!border-primary '>
+                        hover:!text-primary hover:!border-primary'
+                        onClick={() => navigate('/cart')}    
+                    >
                         <LeftOutlined /> 
                         Back to cart
                     </Button>

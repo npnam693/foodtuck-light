@@ -12,11 +12,13 @@ const DetailProduct = () => {
     const { id } = useParams()
     const [product, setProduct] = useState(dataFoods[String(id)])
     const [qty, setQty] = useState<valueType | null>(1)
-
+    const [currentImage, setCurrentImage] = useState(0)
+    
 
     useEffect(() => {
         setProduct(dataFoods[String(id)])
     }, [])
+
 
     return (
         <article>
@@ -25,12 +27,16 @@ const DetailProduct = () => {
             />
 
             <section className="flex flex-row justify-between">
-                <div className="grid grid-cols-4 grid-rows-4 gap-6 basis-[45%] ">
-                    <img src={product.images[1]} alt="" className="width: h-full bg-cover w-full"/>
-                    <img src={product.images[0]} alt="" className="row-span-4 col-span-3 h-full bg-cover w-full w-auto"/>
-                    <img src={product.images[2]} alt="" className="width: h-full bg-cover w-full"/>
-                    <img src={product.images[3]} alt="" className="width: h-full bg-cover w-full"/>
-                    <img src={product.images[4]} alt="" className="width: h-full bg-cover w-full"/>
+                <div className="grid grid-cols-4 grid-rows-4 gap-6 basis-[45%] grid-flow-col h-[700px]">
+                    {
+                        product.images.map((item, index) => {
+                            return (
+                                index !== currentImage && <img src={item} alt="" className="h-full w-full bg-cover" onClick={() => setCurrentImage(index)}/>
+                            )
+                        })
+                    }
+                    <img src={product.images[currentImage]} alt="" className="row-span-4 col-span-3 h-full w-full bg-cover" />
+
                 </div>
 
 

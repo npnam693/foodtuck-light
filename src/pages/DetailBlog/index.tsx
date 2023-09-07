@@ -1,12 +1,12 @@
 import { FacebookFilled, InstagramFilled, TwitterOutlined, YoutubeFilled } from '@ant-design/icons'
 
 import CoverPage from '../../components/CoverPage'
-import BlogSidebar from '../Blog/components/BlogSidebar'
 import { dataBlogs } from '../../data'
 import ItemBlog from '../../components/blog/ItemBlog'
 import ItemComment from '../../components/ItemComment'
 import { Button, Divider, Input } from 'antd'
 import TextArea from 'antd/es/input/TextArea'
+import BlogSidebar from '../blog/components/BlogSidebar'
 
 
 const DetailBlog = () => {

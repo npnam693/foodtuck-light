@@ -1,11 +1,23 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Rate } from 'antd'
 
 
 
 
 const AboutClientSay = () => {
-    const [current, setCurrent] = useState(0)
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+    const [animating, setAnimating] = useState(false)
+
+    useEffect(() => {
+      setAnimating(true)
+      const myTimeOut = setTimeout(() => { setAnimating(false) }, 500)
+    
+      return () => {
+        clearTimeout(myTimeOut)
+      }
+    }, [currentIndex])
+    
 
     return (
     <section>
@@ -15,8 +27,8 @@ const AboutClientSay = () => {
 
         <p className="font-bold text-5xl text-text font-san mb-28">What our client are saying</p>
         
-        <div className='w-8/12 relative shadow min-h-[460px] mr-auto ml-auto flex flex-col 
-            items-center justify-center gap-y-8 py-10 px-32'>
+        <div className={`w-8/12 relative shadow min-h-[460px] mr-auto ml-auto flex flex-col 
+            items-center justify-center gap-y-8 py-10 px-32 ${animating && 'animate-fadeout-bt'}`}>
             <img src='/images/about/avatar-client.png' alt='client' className='w-[132px] h-[132px] absolute -top-[66px]' />
 
             <img src='/textures/quotes.png' alt='quotes' className='w-[40px] h-[40px]' />
@@ -39,8 +51,8 @@ const AboutClientSay = () => {
         <div className='flex gap-x-2 mt-14 justify-center'>
             {
                 [0, 1, 2, 3, 4].map((_, index) => (
-                    <div key={index} onClick={() => setCurrent(index)}
-                        className={`h-4 w-4 bg-disabledGreen rounded-full cursor-pointer ${current === index && 'bg-primary'}`} />
+                    <div key={index} onClick={() => setCurrentIndex(index)}
+                        className={`h-4 w-4 bg-disabledGreen rounded-full cursor-pointer ${currentIndex === index && 'bg-primary'}`} />
                 ))
             }
         </div>

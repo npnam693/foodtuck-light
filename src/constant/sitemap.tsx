@@ -53,7 +53,7 @@ export const HEADER_ACTION : Array<IAction> = [
     path: '/cart'
   },
   {
-    title: "Person",
+    title: "Login",
     icon: <UserOutlined />,
     path: '/login'
   }

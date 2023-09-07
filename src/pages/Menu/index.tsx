@@ -1,7 +1,7 @@
 import CoverPage from "../../components/CoverPage"
 import MenuCategory from "../../components/menu/MenuCategory"
 import MenuStatistics from "../../components/menu/MenuStatistics"
-import HomePartner from "../Home/components/HomePartner"
+import HomePartner from "../home/components/HomePartner"
 
 const Menu = () => {
   return (

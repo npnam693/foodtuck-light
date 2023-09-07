@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import GeneralRoutes from "./GeneralRoutes";
 import DefaultLayout from "../layout";
 import NotFound from "../pages/notFound";
+
+
 const RouterList = () => {
   return (
     <Routes>

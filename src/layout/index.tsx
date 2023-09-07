@@ -5,7 +5,7 @@ const DefaultLayout = ({children} : {children : React.ReactNode}) => {
   return (
     <>
       <Header />
-      <main className='px-[10%]'>
+      <main className='px-[10vw] overflow-x-hidden'>
       {children}
       </main>
       <Footer />
