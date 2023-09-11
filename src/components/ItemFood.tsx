@@ -1,61 +1,32 @@
 import { HeartOutlined, LinkOutlined, ShoppingOutlined } from "@ant-design/icons"
-import { Food } from "../types/listType"
 import { Button } from "antd"
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../state/cart/cartSlice";
-
-export const dataFoods : {[key: string] : Food} = {
-    '1' : {
-        id: '1',
-        name: "Fresh Lime",
-        price: 45,
-        salePrice: 38,
-        reviews: [],
-        rate: 4,
-        qtyReview: 10,
-        images: ['/images/detail/food_detail_1-5.png', '/images/detail/food_detail_1-4.png', '/images/detail/food_detail_1-3.png', '/images/detail/food_detail_1-2.png', '/images/detail/food_detail_1-1.png'],
-        qtyRemain: 20,
-        quickIntro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.',
-        desc: [
-            'Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed purus augue, eu euismod tellus. Nam mattis eros nec mi sagittis sagittis. Vestibulum suscipit cursus bibendum. Integer at justo eget sem auctor auctor eget vitae arcu. Nam tempor malesuada porttitor. Nulla quis dignissim ipsum. Aliquam pulvinar iaculis justo, sit amet interdum sem hendrerit vitae. Vivamus vel erat tortor. Nulla facilisi. In nulla quam, lacinia eu aliquam ac, aliquam in nisl.',
-            'Suspendisse cursus sodales placerat. Morbi eu lacinia ex. Curabitur blandit justo urna, id porttitor est dignissim nec. Pellentesque scelerisque hendrerit posuere. Sed at dolor quis nisi rutrum accumsan et sagittis massa. Aliquam aliquam accumsan lectus quis auctor. Curabitur rutrum massa at volutpat placerat. Duis sagittis vehicula fermentum. Integer eu vulputate justo. Aenean pretium odio vel tempor sodales. Suspendisse eu fringilla leo, non aliquet sem.',
-        ]
-    },
-    '2' : {
-        id: '1',
-        name: "Fresh Lime",
-        price: 45,
-        salePrice: 38,
-        reviews: [],
-        rate: 4,
-        qtyReview: 10,
-        images: ['/images/detail/food_detail_1-5.png', '/images/detail/food_detail_1-4.png', '/images/detail/food_detail_1-3.png', '/images/detail/food_detail_1-2.png', '/images/detail/food_detail_1-1.png'],
-        qtyRemain: 20,
-        quickIntro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.',
-        desc: [
-            'Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed purus augue, eu euismod tellus. Nam mattis eros nec mi sagittis sagittis. Vestibulum suscipit cursus bibendum. Integer at justo eget sem auctor auctor eget vitae arcu. Nam tempor malesuada porttitor. Nulla quis dignissim ipsum. Aliquam pulvinar iaculis justo, sit amet interdum sem hendrerit vitae. Vivamus vel erat tortor. Nulla facilisi. In nulla quam, lacinia eu aliquam ac, aliquam in nisl.',
-            'Suspendisse cursus sodales placerat. Morbi eu lacinia ex. Curabitur blandit justo urna, id porttitor est dignissim nec. Pellentesque scelerisque hendrerit posuere. Sed at dolor quis nisi rutrum accumsan et sagittis massa. Aliquam aliquam accumsan lectus quis auctor. Curabitur rutrum massa at volutpat placerat. Duis sagittis vehicula fermentum. Integer eu vulputate justo. Aenean pretium odio vel tempor sodales. Suspendisse eu fringilla leo, non aliquet sem.',
-        ]
-    },
-}
-console.log(dataFoods['1'].images[0])
+import { toast } from "react-toastify";
+import { dataFoods } from "../data";
 
 const ItemFood = ({id} : {id: string}) => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
+
+    const handleAddToCart = (e : any) => {
+        e.stopPropagation();
+        toast.success(`Add 01 ${dataFoods[id].name} to cart successfully`)
+        dispatch(addProduct({id: id, qty: 1, price: dataFoods[id].salePrice || dataFoods[id].price}))
+    }
     return (
     <div className="group w-full">
         <div className={`relative w-full h-[267px] bg-[url('${dataFoods[id].images[0]}')] bg-cover`}
             style={{backgroundImage: 'url(' + dataFoods[id].images[0] + ')'}}
         >
             <div className="w-full h-full absolute bg-[rgba(0,0,0,0.6)] hidden group-hover:block" />
-            <div className="w-full h-full  items-center justify-center gap-x-6 hidden group-hover:flex group-hover:brightness-150 z-10">
+            <div className="w-full h-full  items-center justify-center gap-x-6 hidden group-hover:flex group-hover:brightness-150 z-10 cursor-pointer" onClick={() => navigate('/detail-product/' + id)} >
                 <Button className='bg-white text-primary hover:!bg-primary hover:text-white' type="primary" size="large" icon={<LinkOutlined />} 
                     onClick={() => navigate('/detail-product/' + id)}
                 />
                 <Button className='bg-white text-primary hover:!bg-primary hover:text-white' type="primary" size="large" icon={<ShoppingOutlined />} 
-                    onClick={() => dispatch(addProduct({id: id, qty: 1, price: dataFoods[id].price}))}
+                    onClick={handleAddToCart}
                 />
                 <Button className='bg-white text-primary hover:!bg-primary hover:text-white' type="primary" size="large" icon={<HeartOutlined />} />
             </div>

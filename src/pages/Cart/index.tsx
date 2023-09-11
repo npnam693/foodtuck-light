@@ -9,12 +9,13 @@ import { RootState } from '../../state/store'
 const ShoppingCart = () => {
   const navigate = useNavigate();
   const dataCart  = useSelector((state: RootState) => state)
+
   return (
     <div>
         <CoverPage title='Shopping Cart' currentPage='Shopping Cart' listPath={[{path:'/', title: 'Home'}]}/>
         <TableCart dataCart={dataCart.cart}/>
 
-        <div className='flex gap-x-10 mt-24'>
+        <div className='flex gap-x-10 mt-24 max-lg:flex-col'>
           <div className='basis-1/2'>
             <p className='font-bold text-[#333] text-3xl mb-6'>Coupon Code</p>
             <div className='p-6 border border-[#e0e0e0] rounded-md'>
@@ -26,10 +27,11 @@ const ShoppingCart = () => {
               />
             </div>
           </div>
+
           <div className='basis-1/2'>
             <p className='font-bold text-[#333] text-3xl mb-6'>Total Bill</p>
             <div className='border border-[#E0E0E0] p-6 rounded-md'>
-              <p className='flex justify-between mb-4 font-bold text-xl text-[#333]'>Cart Subtotal <span>$120.00</span></p>
+              <p className='flex justify-between mb-4 font-bold text-xl text-[#333]'>Cart Subtotal <span>${Number(dataCart.cart.total).toFixed(2)}</span></p>
               <p className='flex justify-between text-[#4F4F4F] text-lg'>Shipping Charge <span>$0.00</span></p>
               <Divider />
               <p className='flex justify-between font-bold text-xl text-[#333]'>Total Amount <span>${dataCart.cart.total}</span></p>

@@ -20,9 +20,9 @@ const HomeTeam = () => {
 
         <div className="grid grid-cols-4 gap-x-10 max-lg:grid-cols-2 max-lg:gap-x-4">
             <ItemMember image="./images/home/member_1.png" name="Mark Henry" role="Owner" />
-            <ItemMember image="./images/home/member_1.png" name="Mark Henry" role="Owner" />
-            <ItemMember image="./images/home/member_1.png" name="Mark Henry" role="Owner" />
-            <ItemMember image="./images/home/member_1.png" name="Mark Henry" role="Owner" />
+            <ItemMember image="./images/home/member_2.png" name="Mark Henry" role="Chef" />
+            <ItemMember image="./images/home/member_3.png" name="Mark Henry" role="Chef" />
+            <ItemMember image="./images/home/member_4.png" name="Mark Henry" role="Chef" />
         </div>
     </section>
   )

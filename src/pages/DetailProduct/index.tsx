@@ -5,8 +5,12 @@ import { ArrowLeftOutlined, ArrowRightOutlined, FacebookFilled,
         HeartOutlined, InstagramFilled, InteractionOutlined, 
         ShoppingCartOutlined, TwitterOutlined, YoutubeFilled } from "@ant-design/icons"
 import { valueType } from "antd/es/statistic/utils"
-import ItemFood, { dataFoods } from "../../components/ItemFood"
+import ItemFood from "../../components/ItemFood"
 import CoverPage from "../../components/CoverPage"
+import { useDispatch } from "react-redux"
+import { addProduct } from "../../state/cart/cartSlice"
+import { toast } from "react-toastify"
+import { dataFoods } from "../../data"
 
 const DetailProduct = () => {
     const { id } = useParams()
@@ -14,11 +18,17 @@ const DetailProduct = () => {
     const [qty, setQty] = useState<valueType | null>(1)
     const [currentImage, setCurrentImage] = useState(0)
     
+    const dispatch = useDispatch()
 
     useEffect(() => {
         setProduct(dataFoods[String(id)])
     }, [])
 
+    const handleAddMultipleProduct = () => {
+        console.log(qty)
+        dispatch(addProduct({id: product.id, price: product.salePrice ? product.salePrice : product.price, qty: Number(qty)}))
+        toast.success(`Add ${Number(qty) < 10 ? '0' + String(qty) : String(qty)} ${product.name} successfull!`)
+    }
 
     return (
         <article>
@@ -29,7 +39,7 @@ const DetailProduct = () => {
             <section className="flex flex-row justify-between">
                 <div className="grid grid-cols-4 grid-rows-4 gap-6 basis-[45%] grid-flow-col h-[700px]">
                     {
-                        product.images.map((item, index) => {
+                        product.images.map((item, index: number) => {
                             return (
                                 index !== currentImage && <img src={item} alt="" className="h-full w-full bg-cover" onClick={() => setCurrentImage(index)}/>
                             )
@@ -91,7 +101,9 @@ const DetailProduct = () => {
                             controls={false}
                             className="overide-input--qty-detail mr-4" 
                         />
-                        <Button icon={<ShoppingCartOutlined/>} type="primary" className="bg-primary rounded-none h-[50px]">Add to cart</Button>
+                        <Button icon={<ShoppingCartOutlined/>} type="primary" className="bg-primary rounded-none h-[50px]"
+                            onClick={handleAddMultipleProduct}
+                        >Add to cart</Button>
                     </div>
 
                     <Divider />
@@ -127,11 +139,12 @@ const DetailProduct = () => {
             <section className="mt-24">
                 <p className="font-bold text-3xl mb-8">Similar Product</p>
 
-                <div className="flex justify-between mb-32">
-                    <ItemFood id={'1'} />
-                    <ItemFood id={'1'} />
-                    <ItemFood id={'1'} />
-                    <ItemFood id={'1'} />
+                <div className="flex justify-between mb-32 gap-x-10">
+                    <ItemFood id={String(Number(id) + 1 < 10 ? Number(id) + 1 : 1)} />
+                    <ItemFood id={String(Number(id) + 2 < 10 ? Number(id) + 2 : 2)} />
+                    <ItemFood id={String(Number(id) + 3 < 10 ? Number(id) + 3 : 3)} />
+                    <ItemFood id={String(Number(id) + 4 < 10 ? Number(id) + 4 : 4)} />
+                    <ItemFood id={String(Number(id) + 5 < 10 ? Number(id) + 5 : 5)} />
                 </div>
             </section>
         </article>

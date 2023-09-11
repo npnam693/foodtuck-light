@@ -2,7 +2,7 @@ export interface Food {
     id: string,
     name: string,
     price: number,
-    salePrice: number,
+    salePrice: number | null,
     reviews: [],
     rate: number,
     qtyReview: number,

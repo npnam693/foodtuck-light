@@ -1,5 +1,3 @@
-import { Button } from "antd"
-import { LeftOutlined, RightOutlined } from "@ant-design/icons"
 import ItemCategory from "../../../components/home/ItemCategory"
 import Slider from "react-slick"
 
@@ -48,6 +46,8 @@ const HomeCategory = () => {
                   }
                 }
               ]}
+              autoplay = {true}
+              autoplaySpeed = {1000}
           >
             <div>
               <ItemCategory name="Grand Italiano" amountRemain={24}/>

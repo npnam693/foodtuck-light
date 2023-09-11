@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <footer className='w-full mt-10'>
       <div className="bg-disabledGreen lg:pt-32 pt-10 relative px-[10vw]">
-        <img src='/textures/limb_big.png' alt="limb" className="absolute -top-56 left-0" />
+        <img src='/textures/limb_big.png' alt="limb" className="absolute -top-56 left-0 z-[-5]" />
         <img src='/textures/cauliflower.png' alt='cauliflower' className="right-0 absolute -bottom-16" />
         <div className="lg:flex lg:justify-between lg:flex-row flex flex-col gap-y-6">
           <div className="w-64">

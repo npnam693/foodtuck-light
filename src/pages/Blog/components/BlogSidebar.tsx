@@ -18,24 +18,29 @@ const listProductTags : Array<string> = [
 
 const dataFilterMenu = [
     {
-    title: 'Breakfast',
-    qty: 12,
-    image: '/images/footer/ins-gallery_6.png', 
+        title: 'Chicken Fry',
+        qty: 26,
+        image: '/images/blog/filter_1.png', 
     },
     {
-        title: 'Breakfast',
-        qty: 12,
-        image: '/images/footer/ins-gallery_6.png', 
+        title: 'Burger Food',
+        qty: 46,
+        image: '/images/blog/filter_2.png', 
     },
     {
-        title: 'Breakfast',
-        qty: 12,
-        image: '/images/footer/ins-gallery_6.png', 
+        title: 'Pizza',
+        qty: 16,
+        image: '/images/blog/filter_3.png', 
     },
     {
-        title: 'Breakfast',
-        qty: 12,
-        image: '/images/footer/ins-gallery_6.png', 
+        title: 'Fresh Fruits',
+        qty: 36,
+        image: '/images/blog/filter_4.png', 
+    },
+    {
+        title: 'Vegetables',
+        qty: 16,
+        image: '/images/blog/filter_5.png', 
     },
 ]
   
@@ -68,9 +73,9 @@ const BlogSidebar = () => {
         <div className='border border-1 border-[#E0E0E0] mt-8 pt-8 pb-4 px-12' >
             <p className='font-bold text-[#333] text-xl mb-8'>Recent Post</p>
             <ItemRecentBlog image={dataBlogs[0].image} date={dataBlogs[0].date} title={dataBlogs[0].title}/>
-            <ItemRecentBlog image={dataBlogs[0].image} date={dataBlogs[0].date} title={dataBlogs[0].title}/>
-            <ItemRecentBlog image={dataBlogs[0].image} date={dataBlogs[0].date} title={dataBlogs[0].title}/>
-            <ItemRecentBlog image={dataBlogs[0].image} date={dataBlogs[0].date} title={dataBlogs[0].title}/>
+            <ItemRecentBlog image={dataBlogs[1].image} date={dataBlogs[0].date} title={dataBlogs[0].title}/>
+            <ItemRecentBlog image={dataBlogs[2].image} date={dataBlogs[0].date} title={dataBlogs[0].title}/>
+            <ItemRecentBlog image={dataBlogs[3].image} date={dataBlogs[0].date} title={dataBlogs[0].title}/>
         </div>
 
 

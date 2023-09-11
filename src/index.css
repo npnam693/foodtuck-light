@@ -244,3 +244,19 @@ img {
     display: block !important;
     background-color: #248001 !important;
 }
+
+
+/* ...................... */
+
+.animate-spin-leaf {
+    animation: spinLeaf 8s linear infinite;
+}
+
+@keyframes spinLeaf {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

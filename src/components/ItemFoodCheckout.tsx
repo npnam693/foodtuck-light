@@ -1,4 +1,4 @@
-import { dataFoods } from "./ItemFood"
+import { dataFoods } from "../data"
 
 const ItemFoodCheckout = ({id} : {id: string}) => {
     const itemData = dataFoods[id]
@@ -9,7 +9,7 @@ const ItemFoodCheckout = ({id} : {id: string}) => {
         <div>
             <p className="text-[#333] font-bold text-base mb-2">{itemData.name}</p>
             <p className="text-[#4f4f4f] mb-1">150 gm net</p>
-            <p className="text-[#4f4f4f]">{itemData.price}</p>
+            <p className="text-[#4f4f4f]">{Number(itemData.price).toFixed(2)}$</p>  
         </div> 
     </div>
   )

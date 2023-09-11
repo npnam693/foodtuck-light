@@ -1,17 +1,14 @@
 import { Button } from "antd"
-import React from "react"
+import React, { useEffect } from "react"
 import '../../animation.css'
 import { useNavigate } from "react-router-dom"
 const demoDish = ['/images/home/dish_1.png', '/images/home/dish_2.png', '/images/home/dish_3.png', '/images/home/dish_4.png']
-
-
-
 
 const circleCss = [
   {
     angle: 'rotate-0',
     tsl: 'translate-x-[15%] -translate-y-[48%]',
-    width: 'w-[560px] max-sm:w-[200px] max-lg:w-[350px]',
+    width: 'w-[700px] max-sm:w-[210px] max-lg:w-[350px]',
     lgWidth: ''
   },
   {
@@ -34,21 +31,20 @@ const circleCss = [
 
 const HomeIntroduce = () => {
   const navigate = useNavigate()
-
   // index: image static, value: image position 
-  const [itemsPosition, setItemsPosition] = React.useState<Array<number>>([0,1,2,3])
+  const [itemsPosition, setItemsPosition] = React.useState<Array<number>>([3,0,1,2])
 
   // index: image static, value: image angle
-  const [itemsAngle, setItemsAngle] = React.useState<Array<number>>([0,140,180,220])
+  const [itemsAngle, setItemsAngle] = React.useState<Array<number>>([220, 0, 140,180])
 
   const handleClickDish = (index: number) => {
     if (itemsPosition[index] === 0) return;
     let next : Array<number> = [], angles : number[] = [];
     
     if (index === 3) next = [1,2,3,0]
-    if (index === 2) next = [2,3,0,1]
-    if (index === 1) next = [3,0,1,2]
-    if (index === 0) next = [0,1,2,3]
+    else if (index === 2) next = [2,3,0,1]
+    else if (index === 1) next = [3,0,1,2]
+    else if (index === 0) next = [0,1,2,3]
 
     angles = next.map((item, index) => 
       itemsAngle[index] > itemsAngle[itemsPosition.indexOf(item)] ? 
@@ -59,9 +55,21 @@ const HomeIntroduce = () => {
     setItemsPosition(next)
   }
 
+
+  useEffect(() => {
+    const myTimeout = setTimeout(() => {
+      handleClickDish(0)
+    }, 1000)
+
+    return () => {
+      clearTimeout(myTimeout)
+    }
+  }, [])
+
+
   return (
     <section className="h-[calc(100vh-42px)] flex flex-col justify-center max-lg:h-auto ">
-      <div className="flex items-center justify-between pb-24 max-lg:flex-col-reverse">
+      <div className="flex items-center justify-between pb-24 max-lg:flex-col-reverse" >
         <div className="w-[525px] max-lg:w-full max-lg:mt-10">
             <span className="relative font-attractive mb-2 text-lg text-primary
               after:block after:w-7 after:h-[1px] after:bg-primary 
@@ -84,38 +92,43 @@ const HomeIntroduce = () => {
         <div className="relative w-[600px] h-[600px] border-2 border-text rounded-full z-0 mr-24 max-lg:w-[60vw] max-lg:h-[60vw] max-lg:ml-auto max-lg:mr-auto max-lg:mt-10 max-lg:scale-100">
           <img src='/images/background/bg-dish.png' alt="bg-dish" className="absolute -bottom-40 -right-64 w-[800px] rotate -z-10 "/>
           <div>
-            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all duration-[1.8s] ${itemsPosition[0] === 0 && 'z-[-5]'}`}
+            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all duration-[2.2s] ease-in-out ${itemsPosition[0] === 0 && 'z-[-5]'}`}
               style={{transform: `rotate(${itemsAngle[0]}deg)`}}
             > 
-              <img src={demoDish[0]} alt="dish0" className={`absolute right-0 bg-cover cursor-pointer transition-all duration-[1.8s] ${circleCss[itemsPosition[0]].tsl} ${circleCss[itemsPosition[0]].width} ${circleCss[itemsPosition[0]].lgWidth} ${itemsPosition[0] === 0 && 'cursor-default'}`}
+              <img src={demoDish[0]} alt="dish0" className={`absolute right-0 bg-cover cursor-pointer transition-all duration-[2.2s] ease-in-out ${circleCss[itemsPosition[0]].tsl} ${circleCss[itemsPosition[0]].width} ${circleCss[itemsPosition[0]].lgWidth} ${itemsPosition[0] === 0 && 'cursor-default'}`}
                 onClick={() => handleClickDish(0)}
               />
             </div>
 
-            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all duration-[1.8s] ${itemsPosition[1] === 0 && 'z-[-5]'} `}
+            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all duration-[2.2s] ease-in-out ${itemsPosition[1] === 0 && 'z-[-5]'} `}
               style={{transform: `rotate(${itemsAngle[1]}deg)`}}
             > 
-              <img src={demoDish[1]} alt="dish0" className={`absolute right-0 bg-cover cursor-pointer transition-all duration-[1.8s]  ${itemsPosition[1] === 0 && 'cursor-default '} ${circleCss[itemsPosition[1]].tsl} ${circleCss[itemsPosition[1]].width} ${circleCss[itemsPosition[1]].lgWidth} `}
+              <img src={demoDish[1]} alt="dish0" className={`absolute right-0 bg-cover cursor-pointer transition-all duration-[2.2s] ease-in-out  ${itemsPosition[1] === 0 && 'cursor-default '} ${circleCss[itemsPosition[1]].tsl} ${circleCss[itemsPosition[1]].width} ${circleCss[itemsPosition[1]].lgWidth} `}
                 onClick={() => handleClickDish(1)}
               />
             </div>
 
-            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all duration-[1.8s] ${itemsPosition[2] === 0 && 'z-[-5]'} `}
+            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all duration-[2.2s] ease-in-out ${itemsPosition[2] === 0 && 'z-[-5]'} `}
               style={{transform: `rotate(${itemsAngle[2]}deg)`}}
             > 
-              <img src={demoDish[2]} alt="dish0" className={`absolute right-0 bg-cover cursor-pointer transition-all duration-[1.8s]  ${itemsPosition[2] === 0 && 'cursor-default '} ${circleCss[itemsPosition[2]].tsl} ${circleCss[itemsPosition[2]].width} ${circleCss[itemsPosition[2]].lgWidth}`}
+              <img src={demoDish[2]} alt="dish0" className={`absolute right-0 bg-cover cursor-pointer transition-all duration-[2.2s] ease-in-out  ${itemsPosition[2] === 0 && 'cursor-default '} ${circleCss[itemsPosition[2]].tsl} ${circleCss[itemsPosition[2]].width} ${circleCss[itemsPosition[2]].lgWidth}`}
                 onClick={() => handleClickDish(2)}
               />
             </div>
 
-            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all duration-[1.8s] ${itemsPosition[3] === 0 && 'z-[-5]'} roate`}
+            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 transition-all duration-[2.2s] ease-in-out ${itemsPosition[3] === 0 && 'z-[-5]'} roate`}
               style={{transform: `rotate(${itemsAngle[3]}deg)`}}
            
            > 
-              <img src={demoDish[3]} alt="dish0" className={`absolute right-0 bg-cover cursor-pointer transition-all duration-[1.8s]  ${itemsPosition[3] === 0 && 'cursor-default '} ${circleCss[itemsPosition[3]].tsl} ${circleCss[itemsPosition[3]].width} ${circleCss[itemsPosition[3]].lgWidth}`}
+              <img src={demoDish[3]} alt="dish0" className={`absolute right-0 bg-cover cursor-pointer transition-all duration-[2.2s] ease-in-out  ${itemsPosition[3] === 0 && 'cursor-default '} ${circleCss[itemsPosition[3]].tsl} ${circleCss[itemsPosition[3]].width} ${circleCss[itemsPosition[3]].lgWidth}`}
                 onClick={() => handleClickDish(3)}
              />
             </div>
+
+            <div className={`absolute top-[calc(50%-2px)] left-0 w-full h-1 rotate-[-20deg] -z-20`}> 
+              <img src={'/textures/leaf.png'} alt="leaf" className="-translate-x-1/2 "/>
+            </div>
+
           </div>
         </div>
     </div>
