@@ -1,4 +1,4 @@
-import { BrowserRouter, useLocation } from "react-router-dom"
+import { BrowserRouter } from "react-router-dom"
 import './index.css'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

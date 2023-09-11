@@ -15,20 +15,6 @@ const Shop = React.lazy(() => import("../pages/shop"))
 const ShoppingCart = React.lazy(() => import("../pages/cart"))
 const DetailProduct = React.lazy(() => import("../pages/detailProduct"))
 const DetailBlog = React.lazy(() => import("../pages/detailBlog"))
-
-// import OurChef from "../pages/ourChef"
-// import Checkout from "../pages/checkout"
-// import FAQ from "../pages/faq"
-// import LogIn from "../pages/logIn"
-// import SignUp from "../pages/signUp"
-// import Home from "../pages/home"
-// import Blog from "../pages/blog"
-// import AboutUs from "../pages/aboutUs"
-// import Shop from "../pages/shop"
-// import ShoppingCart from "../pages/cart"
-// import DetailProduct from "../pages/detailProduct"
-// import DetailBlog from "../pages/detailBlog"
-// import Menu from "../pages/menu"
 const GeneralRoutes : Array<IRoutesProps> = [
     {
         path: '/',  
