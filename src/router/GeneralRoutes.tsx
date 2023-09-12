@@ -1,20 +1,33 @@
+import { Menu } from "antd"
+import Home from "../pages/home"
 import { IRoutesProps } from "../types/props"
-import React, {Suspense} from "react"
+import {Suspense} from "react"
+import Blog from "../pages/blog"
+import AboutUs from "../pages/aboutUs"
+import Shop from "../pages/shop"
+import OurChef from "../pages/ourChef"
+import LogIn from "../pages/logIn"
+import SignUp from "../pages/signUp"
+import FAQ from "../pages/faq"
+import ShoppingCart from "../pages/cart"
+import Checkout from "../pages/checkout"
+import DetailProduct from "../pages/detailProduct"
+import DetailBlog from "../pages/detailBlog"
 
 
-const OurChef = React.lazy(() => import("../pages/ourChef"))
-const Menu = React.lazy(() => import("../pages/menu"))
-const Checkout = React.lazy(() => import("../pages/checkout"))
-const FAQ = React.lazy(() => import("../pages/faq"))
-const LogIn = React.lazy(() => import("../pages/logIn"))
-const SignUp = React.lazy(() => import("../pages/signUp"))
-const Home = React.lazy(() => import("../pages/home"))
-const Blog = React.lazy(() => import("../pages/blog"))
-const AboutUs = React.lazy(() => import("../pages/aboutUs"))
-const Shop = React.lazy(() => import("../pages/shop"))
-const ShoppingCart = React.lazy(() => import("../pages/cart"))
-const DetailProduct = React.lazy(() => import("../pages/detailProduct"))
-const DetailBlog = React.lazy(() => import("../pages/detailBlog"))
+// const OurChef = React.lazy(() => import("../pages/ourChef"))
+// const Menu = React.lazy(() => import("../pages/menu"))
+// const Checkout = React.lazy(() => import("../pages/checkout"))
+// const FAQ = React.lazy(() => import("../pages/faq"))
+// const LogIn = React.lazy(() => import("../pages/logIn"))
+// const SignUp = React.lazy(() => import("../pages/signUp"))
+// const Home = React.lazy(() => import("../pages/home"))
+// const Blog = React.lazy(() => import("../pages/blog"))
+// const AboutUs = React.lazy(() => import("../pages/aboutUs"))
+// const Shop = React.lazy(() => import("../pages/shop"))
+// const ShoppingCart = React.lazy(() => import("../pages/cart"))
+// const DetailProduct = React.lazy(() => import("../pages/detailProduct"))
+// const DetailBlog = React.lazy(() => import("../pages/detailBlog"))
 const GeneralRoutes : Array<IRoutesProps> = [
     {
         path: '/',  

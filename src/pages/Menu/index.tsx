@@ -1,12 +1,14 @@
 import CoverPage from "../../components/CoverPage"
 import MenuCategory from "../../components/menu/MenuCategory"
 import MenuStatistics from "../../components/menu/MenuStatistics"
-import HomePartner from "../home/components/HomePartner"
+import HomePartner from "../home/components/HomePartner.tsx"
 
 const Menu = () => {
   return (
     <div className='min-h-screen'>
+        
         <CoverPage title='Our Menu' currentPage='Menu' listPath={[{title: "Home", path: '/'}]} />
+        
         <MenuCategory 
             title='Starter Menu'
             image='./images/menu/menu_1.png'

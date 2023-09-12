@@ -260,3 +260,9 @@ img {
         transform: rotate(360deg);
     }
 }
+
+.ant-breadcrumb ol{
+    justify-content: center;
+    margin-top: -6px;
+
+}

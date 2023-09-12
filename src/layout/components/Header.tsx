@@ -32,7 +32,7 @@ const Header = () => {
     <header ref={headerRef} className={`flex items-center h-16 px-[10vw] mt-6 sticky top-0  
       ${headerSticked && currentUrl === '/' && "bg-white z-30 shadow-md"} ${headerSticked && currentUrl !== '/' && "bg-[#101721] z-30 shadow-md "} `}>
       
-      <Link to="/" className={`font-sans text-2xl font-bold mr-16 ${currentUrl !== '/' && 'text-white'} relative transition-all left-0 ${openDrawer && '-left-[146px]'}`}>F
+      <Link to="/" className={`font-sans text-2xl font-bold mr-16 ${currentUrl !== '/' && 'text-white'} relative transition-all  ${openDrawer ? '-left-[146px]' : 'left-0'}`}>F
         <span className="text-primary">oo</span>
         dtuck
       </Link>

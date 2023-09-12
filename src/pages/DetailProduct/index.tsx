@@ -36,8 +36,8 @@ const DetailProduct = () => {
                 {title: 'Home',path: '/'},{title: 'Shop',path: '/shop'}]}
             />
 
-            <section className="flex flex-row justify-between">
-                <div className="grid grid-cols-4 grid-rows-4 gap-6 basis-[45%] grid-flow-col h-[700px]">
+            <section className="flex flex-row justify-between max-lg:flex-col max-lg:gap-y-10">
+                <div className="grid grid-cols-4 grid-rows-4 gap-6 basis-[45%] grid-flow-col h-[700px] max-lg:gap-3">
                     {
                         product.images.map((item, index: number) => {
                             return (
@@ -63,7 +63,7 @@ const DetailProduct = () => {
                         </div>    
                     </div>
 
-                    <p className="font-bold text-5xl text-[#333] pb-6">{product.name}</p>
+                    <p className="font-bold text-5xl text-[#333] pb-6 max-lg:text-3xl">{product.name}</p>
 
                     <p className="text-lg text-[#4f4f4f]">{product.quickIntro}</p>
 
@@ -139,7 +139,7 @@ const DetailProduct = () => {
             <section className="mt-24">
                 <p className="font-bold text-3xl mb-8">Similar Product</p>
 
-                <div className="flex justify-between mb-32 gap-x-10">
+                <div className="flex justify-between mb-32 gap-x-10 max-lg:grid max-lg:grid-cols-1  ">
                     <ItemFood id={String(Number(id) + 1 < 10 ? Number(id) + 1 : 1)} />
                     <ItemFood id={String(Number(id) + 2 < 10 ? Number(id) + 2 : 2)} />
                     <ItemFood id={String(Number(id) + 3 < 10 ? Number(id) + 3 : 3)} />

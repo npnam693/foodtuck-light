@@ -6,7 +6,7 @@ import ItemBlog from '../../components/blog/ItemBlog'
 import ItemComment from '../../components/ItemComment'
 import { Button, Divider, Input } from 'antd'
 import TextArea from 'antd/es/input/TextArea'
-import BlogSidebar from '../blog/components/BlogSidebar'
+import BlogSidebar from '../blog/components/BlogSidebar.tsx'
 
 
 const DetailBlog = () => {

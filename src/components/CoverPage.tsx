@@ -26,7 +26,7 @@ const CoverPage = ({title, currentPage, listPath} : {
               ]
           }
           separator={<p className='text-white'><RightOutlined className='relative -bottom-1' /></p>}
-          className='!justify-center flex !text-white lg:mb-40 mb-20'
+          className='!justify-center flex !text-white lg:mb-40 mb-20 max-lg:items-center'
         />
     </div>
   )

@@ -1,9 +1,10 @@
 import CoverPage from "../../components/CoverPage"
-import HomeAboutUs from "../home/components/HomeAboutUs"
-import HomeMenu from "../home/components/HomeMenu"
-import HomeTeam from "../home/components/HomeTeam"
+import HomeAboutUs from "../home/components/HomeAboutUs.tsx"
+import HomeMenu from "../home/components/HomeMenu.tsx"
+import HomeTeam from "../home/components/HomeTeam.tsx"
 import AboutClientSay from "./components/AboutClientSay"
 import AboutWhyChoose from "./components/AboutWhyChoose"
+
 
 const AboutUs = () => {
   return (

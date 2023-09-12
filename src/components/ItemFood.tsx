@@ -10,6 +10,7 @@ const ItemFood = ({id} : {id: string}) => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
+    
     const handleAddToCart = (e : any) => {
         e.stopPropagation();
         toast.success(`Add 01 ${dataFoods[id].name} to cart successfully`)
