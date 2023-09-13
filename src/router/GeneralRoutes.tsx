@@ -1,4 +1,3 @@
-import { Menu } from "antd"
 import Home from "../pages/home"
 import { IRoutesProps } from "../types/props"
 import {Suspense} from "react"
@@ -13,6 +12,7 @@ import ShoppingCart from "../pages/cart"
 import Checkout from "../pages/checkout"
 import DetailProduct from "../pages/detailProduct"
 import DetailBlog from "../pages/detailBlog"
+import Menu from "../pages/menu"
 
 
 // const OurChef = React.lazy(() => import("../pages/ourChef"))
